@@ -29,7 +29,7 @@ if (message.content.startsWith(`${prefix}pogoinfo`)) {
     .addField(`POGO's Website`, `http://www.pogomix.net/`, true)
     .addField(`POGO's Other YT Channel`, `https://www.youtube.com/channel/UCG3aXJ4HoDugcg_E0E4y2VA`, true)
     .setImage("https://i.imgur.com/kpteGYu.png")
-    .setFooter("POGOBot", `${client.user.displayAvatarURL}`)
+    .setFooter("Made By Soldz#6819", `${client.user.displayAvatarURL}`)
     .setThumbnail(pogo) 
     .setTimestamp();
     return message.channel.send(pogoembed);
