@@ -85,11 +85,12 @@ if (message.content.startsWith(`${prefix}pogoinfo`)) {
 	.addField('🖼 `p!avatar`', "Displays the avatar/pfp (profile picture) of yourself or any user you mention.")
 	.addField('🤖 `p!botinfo`', "Infomation on POGO bot.")
 	.addField('❓ `p!info`', "Information on little things and facts about POGO.")
-        .addField('🎉 `p!remix`', "Surprises you with a random remix from a generated queue.") 
+        .addField('🎧 `p!remix`', "Surprises you with a random remix from a generated queue.") 
 	.addField('🔌 `p!serverinfo`', `Infomation on ${server}.`)
 	.addField('👩 `p!userinfo`', "Information on yourself and other users roles, status, tag, etc.") 
 	.setTimestamp();
     return message.channel.send(helpembed);
+message.react('🎧')
   }
 		
 			 if (message.content.startsWith(`${prefix}avatar`)) { 
