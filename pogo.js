@@ -18,7 +18,7 @@ if (message.content.startsWith(`${prefix}pogoinfo`)) {
     .setURL('https://soundcloud.com/pogomix/')
     .setDescription(`Information on **POGO:**`)
     .setColor("RANDOM")
-    .addField('POGO Bio', `POGO is a youtuber, musician, and most importantly an australian. He puts weird sounds into a blender and blasts them into a funky frappe for your earholes! He has been doing this on YouTube since Jun 7, 2007 (6/7/07), and as of 10/17/18, he has over 211 MILLION views on YouTube alone with over 700k subs! Over a decade later He is still growing strong and inspiring new musicians.`)
+    .addField('POGO Bio', `POGO is a YouTuber, musician, and most importantly an australian. He puts weird sounds into a blender and blasts them into a funky frappe for your earholes! He has been doing this on YouTube since Jun 7, 2007 (6/7/07), and has been making music as POGO since 2005. As of 10/17/18, he has over 211 MILLION views on YouTube alone with over 700k subs! Over a decade later He is still growing strong and inspiring new musicians.`)
     .addField(`POGO's Youtube Channel`, `https://www.youtube.com/user/Fagottron/featured`, true)
     .addField(`POGO's Twitter`, `https://twitter.com/OfficialPogo?lang=en`, true)
     .addField(`POGO's Instagram` , `https://www.instagram.com/pogomix/?hl=en` , true)
