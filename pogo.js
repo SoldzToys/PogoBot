@@ -191,6 +191,16 @@ if (message.content.startsWith(`${prefix}serverinfo`)) {
     .setTimestamp();
     return message.channel.send(infoembed);
   }  
+	
+	if (message.content.startsWith(`${prefix}randomartist`)) {
+let replies = ["https://www.youtube.com/watch?v=vPrnQP-q3dc", "https://www.youtube.com/watch?v=oXjKfTjy7wA", "https://www.youtube.com/watch?v=--8oywtLG2I", "https://www.youtube.com/watch?v=mGEcMWyeSVk", "https://www.youtube.com/watch?v=8sX2vxwU7Vg", "https://www.youtube.com/watch?v=Y_RGCHos63I", "https://www.youtube.com/watch?v=tnlhWwRagAg", "https://www.youtube.com/watch?v=2L6POqtJ_Bk", "https://www.youtube.com/watch?v=lryVSUuAPyI", "https://www.youtube.com/watch?v=d6Ipsoz9w_I", "https://www.youtube.com/watch?v=e9X6D_5erLU", "https://www.youtube.com/watch?v=erb9aNcX0IU", "https://www.youtube.com/watch?v=G8pptpmkHXg&t=2s", "https://www.youtube.com/watch?v=_DvWP9hzEsc", "https://www.youtube.com/watch?v=lvgRO_ZntEI", "https://www.youtube.com/watch?v=5hOlNNznVwo", "https://www.youtube.com/watch?v=QaUmJdJ354w", "https://www.youtube.com/watch?v=4MbFSVzUI5I", "https://www.youtube.com/watch?v=073ZVf72Bj0", "https://www.youtube.com/watch?v=JPizGlTuBfk", "https://www.youtube.com/watch?v=GqDzYpzNiMI", "https://www.youtube.com/watch?v=6fCvJ1mTjqo", "https://www.youtube.com/watch?v=ewy3uXVLekA", "https://www.youtube.com/watch?v=qlEjC2ctb40", "https://www.youtube.com/watch?v=DkUmHT_wrsg", "https://www.youtube.com/watch?v=fDgSSMemnDk", "https://www.youtube.com/watch?v=6fGRj38N8bI&t=2s", "https://www.youtube.com/watch?v=fvOuWUKaszI", "https://www.youtube.com/watch?v=LG5saoOpsno", "https://www.youtube.com/watch?v=_YOYk9niqDI", "https://www.youtube.com/watch?v=fWJGNXoskVg", "https://www.youtube.com/watch?v=kD7GtZwweDk", "https://www.youtube.com/watch?v=1N65XUBJh8Y", "https://www.youtube.com/watch?v=JXcBHpeMBaQ", "https://www.youtube.com/watch?v=TUhCrPjOqe8&t=1s", "https://www.youtube.com/watch?v=_VHrh3R5p7U", "https://www.youtube.com/watch?v=kzDsODNcAOw", "https://www.youtube.com/watch?v=QUVn1flY0AA", "https://www.youtube.com/watch?v=hWe5sEkaCEU", "https://www.youtube.com/watch?v=JZXURBRGakM", "https://www.youtube.com/watch?v=ITtNW44QAAI", "https://www.youtube.com/watch?v=AZn6c4CeJCc", "https://www.youtube.com/watch?v=MvfkyURi89A", "https://www.youtube.com/watch?v=Q_Co7er4Vuk", "https://www.youtube.com/watch?v=PW5_GNG7q2w", "https://www.youtube.com/watch?v=5Xid6tLTg3c", "https://www.youtube.com/watch?v=lLJYLtz3Usw", "https://www.youtube.com/watch?v=xJ4-vj4zBcw"];
+let result = Math.floor((Math.random() * replies.length));
+	let randomembed = new Discord.RichEmbed() 
+                .setTitle(`Random Mix Link`)
+               .setDescription(replies[result])
+                .setColor("RANDOM")
+	return message.channel.send(randomembed);
+    }
 });
 
 
