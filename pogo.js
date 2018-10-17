@@ -2,6 +2,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require('./botconfig.json');
 const { prefix, token } = require('./botconfig.json');
+const moment = require('moment');
+require('moment-duration-format');
 
   client.on("ready", async () => {
   console.log(`${client.user.username} is on!`);
@@ -115,6 +117,7 @@ if(!user) return message.channel.send("You haven't selected/mentioned a user who
     .addField("Bot Name", client.user.username, true)
     .addField("Bot Tag", client.user.tag, true)
     .addField("ID", client.user.id, true)
+    .addField("Last Update", `${moment.duration(client.uptime).format('d[d ]h[h ]m[m ]s[s]')} ago`, true)
     .addField("Date Of Creation", client.user.createdAt.toLocaleDateString(), true)
     .addField("Discord.js Version", "discord.js 11.4.2", true)
     .setFooter("Made By Soldz#6819", `${client.user.displayAvatarURL}`)
