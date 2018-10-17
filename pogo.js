@@ -187,7 +187,7 @@ if (message.content.startsWith(`${prefix}serverinfo`)) {
     .addField("Unfinished Projects", `Some of POGO's most well known collabortains are with people like Jeesh & John Sean, but did you know he has started projects with other people and Jeesh that he never finished? There are many channels on youtube and soundcloud accounts that have these around. Such as https://soundcloud.com/malorie-smith-148602862 (they have tons of original music, I suggest listening to them you won't regret it!), https://soundcloud.com/simplynotmytrackz, https://www.youtube.com/channel/UCBLj4LEIBfeyszoXmMwZkAg/featured and many more! Go explore and find some.`) 
     .addField("Behind The Logo", `Have you ever wondered why POGO's logo is a bunny head? Well on a stream that is now down when someone asked about it he said something on the lines of "I was dating a girl and I asked her to draw me something for my channel and she came up with that."`)
     .addField("Pogo Tips", "Want some advice on how to start out on making music? Pogo Tips: https://www.youtube.com/watch?v=nSlBiBu6-fs")
-    .addField("Pogo and Crowder" "https://youtu.be/PErGN3QuE34?t=4695")
+    .addField("Pogo's Politics", "Did you know that Pogo has a political opinion?! There are many videos, but this is one of the *favs*: https://youtu.be/PErGN3QuE34?t=4695")
     .setFooter("Fun Fact: This bot used to be an upload informer for the creator.", `${client.user.displayAvatarURL}`)
     .setThumbnail(pogo)      
     .setTimestamp();
