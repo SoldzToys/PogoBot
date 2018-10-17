@@ -29,7 +29,7 @@ if (message.content.startsWith(`${prefix}pogoinfo`)) {
     .addField(`POGO's Facebook`, `https://www.facebook.com/officialpogomusic/`, true)
     .addField(`POGO's Website`, `http://www.pogomix.net/`, true)
     .addField(`POGO's Other YT Channel`, `https://www.youtube.com/channel/UCG3aXJ4HoDugcg_E0E4y2VA`, true)
-    .addField(`Secret Channel`, `BSHFTW`, true)
+    .addField(`Secret Channel`, `${BSHFTW}`, true)
     .setImage("https://i.imgur.com/kpteGYu.png")
     .setFooter("Made By Soldz#6819", `${client.user.displayAvatarURL}`)
     .setThumbnail(pogo) 
@@ -68,7 +68,6 @@ if (message.content.startsWith(`${prefix}pogoinfo`)) {
     .addField('SimmerTunes', `Formerly known as ShowToonZ: https://soundcloud.com/simmertunes`, true)
     .setFooter("If you would like more people you think should be added, contact me at Soldz#6819.", `${client.user.displayAvatarURL}`)
     .setThumbnail(sicon) 
-    .setTimestamp();
     return message.channel.send(blujayembed);
 }
 });
