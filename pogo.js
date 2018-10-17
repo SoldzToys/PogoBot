@@ -71,7 +71,6 @@ if (message.content.startsWith(`${prefix}pogoinfo`)) {
     return message.channel.send(blujayembed);
 }
 	
-	client.on('message', async (message, member) => {
 
     if (message.content.startsWith(`${prefix}help`)) {
 	let server = message.guild.name;
@@ -90,6 +89,7 @@ if (message.content.startsWith(`${prefix}pogoinfo`)) {
 	.setTimestamp();
 	  message.channel.send(helpembed);
  message.react(message.guild.emojis.get('502194413725024276'))
+	    
   }
 		
 			 if (message.content.startsWith(`${prefix}avatar`)) { 
@@ -123,7 +123,6 @@ if(!user) return message.channel.send("You haven't selected/mentioned a user who
     return message.channel.send(botembed);
   }      
 		
-		client.on('message', async (message) => {
 	
 if (message.content.startsWith(`${prefix}serverinfo`)) {		
     let sicon = message.guild.iconURL;
@@ -158,7 +157,7 @@ if (message.content.startsWith(`${prefix}serverinfo`)) {
             let userEmbed = new Discord.RichEmbed()
             .setAuthor(`${user.username}'s Info`, user.displayAvatarURL)
             .setThumbnail(user.displayAvatarURL)
-            .setColor('#2B547E')
+            .setColor("RANDOM")
             .addField('ID', user.id, true)
             .addField('Current Tag', user.tag, true)
             .addField('Server Nickname', `${player.displayName}`, true) 
