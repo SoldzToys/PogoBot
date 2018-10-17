@@ -11,7 +11,7 @@ const { prefix, token } = require('./botconfig.json');
 client.on('message', async (message) => {
 	
 if (message.content.startsWith(`${prefix}pogoinfo`)) {		
-    let pogo = "https://i.imgur.com/kpteGYu.png"
+    let pogo = "https://i.imgur.com/HrAnGFw.png"
     let pogoembed = new Discord.RichEmbed()
     .setTitle("Pogomix")
     .setURL('https://soundcloud.com/pogomix/')
