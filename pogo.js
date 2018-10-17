@@ -11,8 +11,8 @@ const { prefix, token } = require('./botconfig.json');
 client.on('message', async (message) => {
 	
 if (message.content.startsWith(`${prefix}pogoinfo`)) {		
-    let pogo = message.guild.name;
-    let serverembed = new Discord.RichEmbed()
+    let pogo = "https://i.imgur.com/kpteGYu.png"
+    let pogoembed = new Discord.RichEmbed()
     .setTitle("Pogomix")
     .setURL('https://soundcloud.com/pogomix/')
     .setDescription(`Information on **POGO:**`)
@@ -32,7 +32,7 @@ if (message.content.startsWith(`${prefix}pogoinfo`)) {
     .setFooter(`${pogo}`)
     .setThumbnail(pogo) 
     .setTimestamp();
-    return message.channel.send(serverembed);
+    return message.channel.send(pogoembed);
   }
 
 
