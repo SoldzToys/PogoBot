@@ -40,7 +40,7 @@ if (message.content.startsWith(`${prefix}pogoinfo`)) {
 	if (message.content.startsWith(`${prefix}artistinfo`)) {		
     let sicon = message.guild.iconURL;
     let blujayembed = new Discord.RichEmbed()
-    .setTitle("Other C&S Artists")
+    .setTitle("Other C&S Artists!")
     .setURL('https://discord.gg/TtarM43')
     .setDescription(`Information on other artists who also do chopped and screwed vocals as they are offically called, or pogo-like/pogo styled music. And I will be providing links the place they upload/used to upload often:`)
     .setColor("RANDOM")
