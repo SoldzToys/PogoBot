@@ -31,7 +31,7 @@ if (message.content.startsWith(`${prefix}pogoinfo`)) {
     .addField(`POGO's Other YT Channel`, `https://www.youtube.com/channel/UCG3aXJ4HoDugcg_E0E4y2VA`, true)
     .addField(`Secret Channel`, `${BSHFTW}`, true)
     .setImage("https://i.imgur.com/kpteGYu.png")
-    .setFooter("Made By Soldz#6819", `${client.user.displayAvatarURL}`)
+    .setFooter("Pogo Music", `${client.user.displayAvatarURL}`)
     .setThumbnail(pogo) 
     .setTimestamp();
     return message.channel.send(pogoembed);
@@ -70,6 +70,129 @@ if (message.content.startsWith(`${prefix}pogoinfo`)) {
     .setThumbnail(sicon) 
     return message.channel.send(blujayembed);
 }
+	
+	client.on('message', async (message, member) => {
+
+    if (message.content.startsWith(`${prefix}help`)) {
+	let server = message.guild.name;
+	let helpembed = new Discord.RichEmbed()
+	.setTitle(`🎶 ${server} Commands`)
+	.setDescription(`The commands of ${server}:`)
+	.setColor("RANDOM")
+	.addField('🏆 `p!pogoinfo`', "If you are a new fan, old fan, or someone who just wants to know about POGO, read it all in here.")
+	.addField('💿 `p!artistinfo`', "Oh man, there are tons of other artists out there that do stuff like POGO so get on out there and support em! **WARNING**: Long list of people, beware.")
+	.addField('🖼 `p!avatar`', "Displays the avatar/pfp (profile picture) of yourself or any user you mention.")
+	.addField('🤖 `p!botinfo`', "Infomation on POGO bot.")
+	.addField('❓ `p!info`', "Information on little things and facts about POGO.")
+	.addField('🔌 `p!serverinfo`', `Infomation on ${server}.`)
+	.addField('👩 `p!userinfo`', "Information on yourself and other users roles, status, tag, etc.") 
+
+	.setTimestamp();
+	  message.channel.send(helpembed);
+ message.react(message.guild.emojis.get('502194413725024276'))
+  }
+		
+			 if (message.content.startsWith(`${prefix}avatar`)) { 
+      let player = message.mentions.members.first() || message.member
+	   let user = player.user
+if(!user) return message.channel.send("You haven't selected/mentioned a user whose avatar you want to see."); 
+    let avatarEmbed = new Discord.RichEmbed()
+    .setAuthor(`${user.tag}`, `${user.displayAvatarURL}`)
+    .setTitle('Avatar')
+    .setImage(user.displayAvatarURL)
+    .setColor("RANDOM");
+    return message.channel.send(avatarEmbed);
+}
+		
+		  if (message.content.startsWith(`${prefix}botinfo`)) {
+
+    let bicon = client.user.displayAvatarURL;
+    let botembed = new Discord.RichEmbed()
+    .setTitle("Bot Information")
+    .setDescription(`Information on ${client.user.username}`)
+    .setColor("RANDOM")
+    .setThumbnail(bicon)
+    .addField("Bot Name", client.user.username, true)
+    .addField("Bot Tag", client.user.tag, true)
+    .addField("ID", client.user.id, true)
+    .addField("Serving", `${client.users.size} Members`, true)
+    .addField("Date Of Creation", client.user.createdAt.toLocaleDateString(), true)
+    .addField("Discord.js Version", "discord.js 11.4.2", true)
+    .setFooter("Made By Soldz#6819", `${client.user.displayAvatarURL}`)
+    .setTimestamp();
+    return message.channel.send(botembed);
+  }      
+		
+		client.on('message', async (message) => {
+	
+if (message.content.startsWith(`${prefix}serverinfo`)) {		
+    let sicon = message.guild.iconURL;
+    let server = message.guild.name;
+    let serverembed = new Discord.RichEmbed()
+    .setTitle("Server Information")
+    .setDescription(`Information on ${server}:`)
+    .setColor("RANDOM")
+    .addField('Server ID', message.guild.id, true)
+    .addField('Server Name', message.guild.name, true)
+    .addField('Humans', `${message.guild.members.filter(m => !m.user.bot).size}`, true)
+    .addField('Bots', `${message.guild.members.filter(m => m.user.bot).size}`, true)
+    .addField('Member Total', message.guild.memberCount, true)
+    .addField('Role Total', message.guild.roles.size, true)
+    .addField('Channel Total', message.guild.channels.size, true)
+    .addField('Region', message.guild.region, true)
+    .addField('Made On', message.guild.createdAt.toLocaleDateString(), true)
+    .addField('Server Owner', message.guild.owner, true)
+    .setFooter(`${server}`, sicon)
+    .setThumbnail(sicon) 
+    .setTimestamp();
+    return message.channel.send(serverembed);
+  }
+			
+			if (message.content.startsWith(`${prefix}userinfo`)) {
+
+            let player = message.mentions.members.first() || message.member
+            let iicon = player.user.displayAvatarURL;
+            let roles = player.roles.map(role => role).join(" ");
+	    let user = player.user
+        if(!user) return message.channel.send("You haven't selected/mentioned a user whose info you want to see.");
+            let userEmbed = new Discord.RichEmbed()
+            .setAuthor(`${user.username}'s Info`, user.displayAvatarURL)
+            .setThumbnail(user.displayAvatarURL)
+            .setColor('#2B547E')
+            .addField('ID', user.id, true)
+            .addField('Current Tag', user.tag, true)
+            .addField('Server Nickname', `${player.displayName}`, true) 
+            .addField('Highest Member Role', `${player.highestRole.name}`, true)
+            .addField('Roles', `${roles}`)
+            .addField('Game/Playing', `${(user.presence.game && user.presence.game && user.presence.game.name) || 'None'}`, true)
+            .addField('Status', user.presence.status, true)
+            .addField('Bot', user.bot, true)
+            .addField('Joined At:', `${player.joinedAt}`)
+            .addField('Created On:', `${player.user.createdAt}`)
+            .setThumbnail(iicon)
+            .setTimestamp();
+	return message.channel.send(userEmbed);
+	}
+			
+ if (message.content.startsWith(`${prefix}info`)) {
+    let pogo = "https://i.imgur.com/kpteGYu.png"	 
+    let infoembed = new Discord.RichEmbed()
+    .setTitle("More Information About POGO")
+    .setDescription(`Fun Fact: POGO/Nick Bertke turned 30 years old in 2018!`)
+    .setColor("RANDOM")
+    .setThumbnail(bicon)
+    .addField("Is Nick a Homophobic Bigot? ", "To answer the question straightforwardly, no. Pogo addresses this in detail in a video, that is now taken down, but Pewdiepie talks about this in a video and shows the video. I'd suggest watching this for more information on the subject: https://youtu.be/_nChWc24ZM4?t=38 and remember to have an open mind at all times.` , true)
+    .addField("POGO's Real Name", "Christopher Nicholas Bertke.", true)
+    .addField("Most Popular YouTube Video", "Over a decade ago POGO uploaded his famous Alice disney remix and today sits at 22M views!")
+    .addField("Location", "Did you know that Smuffy and POGO live in the same country? Crazy right?")
+    .addField("Unfinished Projects", `Some of POGO's most well known collabortains are with people like Jeesh & John Sean, but did you know he has started projects with other people and Jeesh that he never finished? There are many channels on youtube and soundcloud accounts that have these around. Such as https://soundcloud.com/malorie-smith-148602862 (they have tons of original music, I suggest listening to them you won't regret it!), https://soundcloud.com/simplynotmytrackz, and much more! Go explore and find some.`) 
+    .addField("Behind The Logo", `Have you ever wondered why POGO's logo is a bunny head? Well on a stream that is now down when someone asked about it he said something on the lines of "I was dating a girl and I asked her to draw me something for my channel and she came up with that."`)
+    .addField("Pogo Tips", "Want some advice on how to start out on making music? Pogo Tips: https://www.youtube.com/watch?v=nSlBiBu6-fs")
+    .setFooter("Fun Fact: This bot used to be an upload informer for the creator.", `${client.user.displayAvatarURL}`)
+    .setThumbnail(pogo)      
+    .setTimestamp();
+    return message.channel.send(infoembed);
+  }  
 });
 
 
