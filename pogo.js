@@ -5,7 +5,7 @@ const { prefix, token } = require('./botconfig.json');
 
   client.on("ready", async () => {
   console.log(`${client.user.username} is on!`);
-  client.user.setActivity('POGO', {type: "streaming", url: "https://www.twitch.tv/pogoism"});
+  client.user.setActivity('Pogoism', {type: "streaming", url: "https://www.twitch.tv/pogoism"});
 });
 
 client.on('message', async (message) => {
