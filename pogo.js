@@ -33,7 +33,7 @@ if (message.content.startsWith(`${prefix}pogoinfo`)) {
     .setThumbnail(pogo) 
     .setTimestamp();
     return message.channel.send(pogoembed);
-  }
+  });
 
 
 client.login(process.env.BOT_TOKEN); 
