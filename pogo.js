@@ -28,8 +28,8 @@ if (message.content.startsWith(`${prefix}pogoinfo`)) {
     .addField(`POGO's Facebook`, `https://www.facebook.com/officialpogomusic/`, true)
     .addField(`POGO's Website`, `http://www.pogomix.net/`, true)
     .addField(`POGO's Other YT Channel`, `https://www.youtube.com/channel/UCG3aXJ4HoDugcg_E0E4y2VA`, true)
-    .setImage("POGO", client.user.displayAvatarURL)
-    .setFooter(`${pogo}`)
+    .setImage("https://i.imgur.com/kpteGYu.png")
+    .setFooter("POGO", client.user.displayAvatarURL)
     .setThumbnail(pogo) 
     .setTimestamp();
     return message.channel.send(pogoembed);
