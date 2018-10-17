@@ -90,7 +90,6 @@ if (message.content.startsWith(`${prefix}pogoinfo`)) {
 	.addField('👩 `p!userinfo`', "Information on yourself and other users roles, status, tag, etc.") 
 	.setTimestamp();
 	  message.channel.send(helpembed);
- message.react(message.guild.emojis.get('502218193092476928'))
 	    
   }
 		
