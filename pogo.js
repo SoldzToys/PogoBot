@@ -31,7 +31,7 @@ if (message.content.startsWith(`${prefix}pogoinfo`)) {
     .addField(`POGO's Facebook`, `https://www.facebook.com/officialpogomusic/`, true)
     .addField(`POGO's Website`, `http://www.pogomix.net/`, true)
     .addField(`POGO's Other YT Channel`, `https://www.youtube.com/channel/UCG3aXJ4HoDugcg_E0E4y2VA`, true)
-    .addField(`Secret Channel`, `${BSHFTW}`, true)
+    .addField(`Archive Channel`, `${BSHFTW}`, true)
     .setImage("https://i.imgur.com/kpteGYu.png")
     .setFooter("Pogo Music", `${client.user.displayAvatarURL}`)
     .setThumbnail(pogo) 
