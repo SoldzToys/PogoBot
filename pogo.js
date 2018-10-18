@@ -109,7 +109,7 @@ if(!user) return message.channel.send("You haven't selected/mentioned a user who
 
     let bicon = client.user.displayAvatarURL;
     let botembed = new Discord.RichEmbed()
-    .setTitle("Bot Information")
+    .setTitle("🤖 Bot Information")
     .setDescription(`Information on ${client.user.username}`)
     .setColor("RANDOM")
     .setThumbnail(bicon)
@@ -141,7 +141,7 @@ if (message.content.startsWith(`${prefix}serverinfo`)) {
     .addField('Channel Total', message.guild.channels.size, true)
     .addField('Region', message.guild.region, true) 
     .addField('Made On', message.guild.createdAt.toLocaleDateString(), true)
-    .addField('Server Owner', message.guild.owner, true)
+    .addField('👑 Server Owner', message.guild.owner, true)
     .setFooter(`${server}`, sicon)
     .setThumbnail(sicon) 
     .setTimestamp();
