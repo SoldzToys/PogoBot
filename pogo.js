@@ -16,7 +16,7 @@ if (message.content.toLowerCase().startsWith(`${prefix}pogoinfo`)) {
     let BSHFTW = "https://www.youtube.com/user/BSHFTW/featured"
     let pogo = "https://i.imgur.com/HrAnGFw.png"
     let pogoembed = new Discord.RichEmbed()
-    .setTitle("Pogomix")
+    .setTitle("<:nick:502697290532913152> Pogomix")
     .setURL('https://soundcloud.com/pogomix/')
     .setDescription(`Information on **POGO:**`)
     .setColor("RANDOM")
@@ -42,7 +42,7 @@ if (message.content.toLowerCase().startsWith(`${prefix}pogoinfo`)) {
 	if (message.content.toLowerCase().startsWith(`${prefix}artistinfo`)) {		
     let sicon = message.guild.iconURL;
     let blujayembed = new Discord.RichEmbed()
-    .setTitle("Other C&S Artists!")
+    .setTitle("<:pogobunny:502698235845017611> Other C&S Artists!")
     .setURL('https://discord.gg/TtarM43')
     .setDescription(`Information on other artists who also do chopped and screwed vocals as they are offically called, or pogo-like/pogo styled music. And I will be providing links the place they upload/used to upload often:`)
     .setColor("RANDOM")
@@ -80,17 +80,17 @@ if (message.content.toLowerCase().startsWith(`${prefix}pogoinfo`)) {
 	.setTitle(`🎶 ${server} Commands`)
 	.setDescription(`The commands of ${server}:`)
 	.setColor("RANDOM")
-	.addField('🏆 `p!pogoinfo`', "If you are a new fan, old fan, or someone who just wants to know about POGO, read it all in here.")
+	.addField('<:pogo:502699144163360769> `p!pogoinfo`', "If you are a new fan, old fan, or someone who just wants to know about POGO, read it all in here.")
 	.addField('💿 `p!artistinfo`', "Oh man, there are tons of other artists out there that do stuff like POGO so get on out there and support em! **WARNING**: Long list of people, beware.")
 	.addField('🖼 `p!avatar`', "Displays the avatar/pfp (profile picture) of yourself or any user you mention.")
 	.addField('🤖 `p!botinfo`', "Infomation on POGO bot.")
 	.addField('❓ `p!info`', "Information on little things and facts about POGO.")
-        .addField('🎧 `p!remix`', "Surprises you with a random remix from a generated queue.") 
+        .addField('<:DONK:502699143287013386> `p!remix`', "Surprises you with a random remix from a generated queue.") 
 	.addField('🔌 `p!serverinfo`', `Infomation on ${server}.`)
 	.addField('👩 `p!userinfo`', "Information on yourself and other users roles, status, tag, etc.") 
 	.setTimestamp();
     return message.channel.send(helpembed);
-message.react('🎧')
+message.react("🎧")
   }
 		
 			 if (message.content.toLowerCase().startsWith(`${prefix}avatar`)) { 
@@ -177,7 +177,7 @@ if (message.content.toLowerCase().startsWith(`${prefix}serverinfo`)) {
  if (message.content.toLowerCase().startsWith(`${prefix}info`)) {
     let pogo = "https://i.imgur.com/kpteGYu.png"	 
     let infoembed = new Discord.RichEmbed()
-    .setTitle("More Information About POGO")
+    .setTitle("<:pogonick:502699143878148097> More Information About POGO")
     .setDescription(`Fun Fact: POGO/Nick Bertke turned 30 years old in 2018!`)
     .setColor("RANDOM")
     .addField("Is Nick a Homophobic Bigot? ", `To answer the question straightforwardly, no. Pogo addresses this in detail in a video, that is now taken down, but Pewdiepie talks about this in a video and shows the video. I'd suggest watching this for more information on the subject: https://youtu.be/_nChWc24ZM4?t=38` , true)
@@ -200,7 +200,7 @@ if (message.content.toLowerCase().startsWith(`${prefix}serverinfo`)) {
 let replies = ["https://www.youtube.com/watch?v=vPrnQP-q3dc", "https://www.youtube.com/watch?v=oXjKfTjy7wA", "https://www.youtube.com/watch?v=--8oywtLG2I", "https://www.youtube.com/watch?v=mGEcMWyeSVk", "https://www.youtube.com/watch?v=8sX2vxwU7Vg", "https://www.youtube.com/watch?v=Y_RGCHos63I", "https://www.youtube.com/watch?v=tnlhWwRagAg", "https://www.youtube.com/watch?v=2L6POqtJ_Bk", "https://www.youtube.com/watch?v=lryVSUuAPyI", "https://www.youtube.com/watch?v=d6Ipsoz9w_I", "https://www.youtube.com/watch?v=e9X6D_5erLU", "https://www.youtube.com/watch?v=erb9aNcX0IU", "https://www.youtube.com/watch?v=G8pptpmkHXg&t=2s", "https://www.youtube.com/watch?v=_DvWP9hzEsc", "https://www.youtube.com/watch?v=lvgRO_ZntEI", "https://www.youtube.com/watch?v=5hOlNNznVwo", "https://www.youtube.com/watch?v=QaUmJdJ354w", "https://www.youtube.com/watch?v=4MbFSVzUI5I", "https://www.youtube.com/watch?v=073ZVf72Bj0", "https://www.youtube.com/watch?v=JPizGlTuBfk", "https://www.youtube.com/watch?v=GqDzYpzNiMI", "https://www.youtube.com/watch?v=6fCvJ1mTjqo", "https://www.youtube.com/watch?v=ewy3uXVLekA", "https://www.youtube.com/watch?v=qlEjC2ctb40", "https://www.youtube.com/watch?v=DkUmHT_wrsg", "https://www.youtube.com/watch?v=fDgSSMemnDk", "https://www.youtube.com/watch?v=6fGRj38N8bI&t=2s", "https://www.youtube.com/watch?v=fvOuWUKaszI", "https://www.youtube.com/watch?v=LG5saoOpsno", "https://www.youtube.com/watch?v=_YOYk9niqDI", "https://www.youtube.com/watch?v=fWJGNXoskVg", "https://www.youtube.com/watch?v=kD7GtZwweDk", "https://www.youtube.com/watch?v=1N65XUBJh8Y", "https://www.youtube.com/watch?v=JXcBHpeMBaQ", "https://www.youtube.com/watch?v=TUhCrPjOqe8&t=1s", "https://www.youtube.com/watch?v=_VHrh3R5p7U", "https://www.youtube.com/watch?v=kzDsODNcAOw", "https://www.youtube.com/watch?v=QUVn1flY0AA", "https://www.youtube.com/watch?v=hWe5sEkaCEU", "https://www.youtube.com/watch?v=JZXURBRGakM", "https://www.youtube.com/watch?v=ITtNW44QAAI", "https://www.youtube.com/watch?v=AZn6c4CeJCc", "https://www.youtube.com/watch?v=MvfkyURi89A", "https://www.youtube.com/watch?v=Q_Co7er4Vuk", "https://www.youtube.com/watch?v=PW5_GNG7q2w", "https://www.youtube.com/watch?v=5Xid6tLTg3c", "https://www.youtube.com/watch?v=lLJYLtz3Usw", "https://www.youtube.com/watch?v=xJ4-vj4zBcw", "https://www.youtube.com/watch?v=dDGfCt6m76w", "https://www.youtube.com/watch?v=yJ_DVIRUSyc&t=1s", "https://www.youtube.com/watch?v=BN90rckRV5Q", "https://www.youtube.com/watch?v=k4qJ1gbzUwQ", "https://www.youtube.com/watch?v=y8Eap60iY9c", "https://www.youtube.com/watch?v=11cSTaN16vI"];
 let result = Math.floor((Math.random() * replies.length));
 	let randomembed = new Discord.RichEmbed() 
-                .setTitle(`Random Remix`)
+                .setTitle(`🎧 Random Remix`)
                .setDescription(replies[result])
                 .setColor("RANDOM")
 	return message.channel.send(randomembed);
