@@ -184,7 +184,7 @@ if (message.content.toLowerCase().startsWith(`${prefix}serverinfo`)) {
     .addField("POGO's Real Name", "Christopher Nicholas Bertke.", true)
     .addField("Most Popular YouTube Video", "Over a decade ago POGO uploaded his famous Alice disney remix and today sits at 22M views!")
     .addField("Location: Australia", "Did you know that Smuffy and POGO live in the same country? Crazy right?")
-    .addField("Unfinished Projects", `Some of POGO's most well known collabortains are with people like Jeesh & John Sean, but did you know he has started projects with other people and Jeesh that he never finished? There are many channels on youtube and soundcloud accounts that have these around. Such as https://soundcloud.com/malorie-smith-148602862 (they have tons of original music, I suggest listening to them you won't regret it!), https://soundcloud.com/simplynotmytrackz, https://www.youtube.com/channel/UCBLj4LEIBfeyszoXmMwZkAg/featured and many more! Go explore and find some.`) 
+    .addField("Unfinished Projects", `Some of POGO's most well known collabortains are with people like Jeesh (https://www.youtube.com/watch?v=FRSr0GprIIw) & John Sean (https://www.youtube.com/watch?v=hpx-742y_IY), but did you know he has started projects with other people and Jeesh that he never finished? There are many channels on youtube and soundcloud accounts that have these around. Such as https://soundcloud.com/malorie-smith-148602862 (they have tons of original music, I suggest listening to them you won't regret it!), https://soundcloud.com/simplynotmytrackz, https://www.youtube.com/channel/UCBLj4LEIBfeyszoXmMwZkAg/featured and many more! Go explore and find some.`) 
     .addField("Behind The Logo", `Have you ever wondered why POGO's logo is a bunny head? Well on a stream that is now down when someone asked about it he said something on the lines of "I was dating a girl and I asked her to draw me something for my channel and she came up with that."`)
     .addField("The Visa, The US, and The POGO", "As many fans know, pogo was banned from the US after an incident with his visa back in 2011 and was put on a 10 year ban from coming back which is thankfully over in 2021 and he will be allowed to return to the USA. The old video of him explaining this is most likely gone for some reason not sure why. He even spent 3 weeks in prison, which he talks about that and the visa thing here: https://youtu.be/PErGN3QuE34?t=7708")
     .addField("POGO's Sub Count", `Back in 2011, POGO used to have over 1.5 million subs (which explains why in some videos you can see a 1M Play Button) before the visa issue that got him to lose over 70-74% of his subs at the time. Leaving him at around 430-450k subs after he got released, and you couldn't subscribe to him either at the time.`) 
@@ -206,6 +206,18 @@ let result = Math.floor((Math.random() * replies.length));
 	return message.channel.send(randomembed);
     }
 });
+
+client.on("guildUpdate", function (oldGuild, newGuild) {
+         let channel = client.channels.get("499832353544470539");
+	 let gicon = newGuild.iconURL;
+        const eeembed = new Discord.RichEmbed()
+            .setColor("#7289da")
+            .setThumbnail(gicon)
+            .setAuthor(`Pogo's server has been Updated`, gicon)
+            .addField(`Old Guild Name:`, `${oldGuild}`)
+            .addField(`New Guild Name:`, `${newGuild}`)
+        return channel.send(eeembed);
+}); 
 
 
 client.login(process.env.BOT_TOKEN); 
