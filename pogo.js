@@ -43,9 +43,9 @@ if (message.content.toLowerCase().startsWith(`${prefix}pogoinfo`)) {
 	if (message.content.toLowerCase().startsWith(`${prefix}artistinfo`)) {		
     let sicon = message.guild.iconURL;
     let blujayembed = new Discord.RichEmbed()
-    .setTitle("<:pogobunny:502698235845017611> Other C&S Artists!")
+    .setTitle("<:pogobunny:502698235845017611> Other C&S/Plunderphonic Artists!")
     .setURL('https://discord.gg/TtarM43')
-    .setDescription(`Information on other artists who also do chopped and screwed vocals as they are offically called, or pogo-like/pogo styled music. And I will be providing links the place they upload/used to upload often:`)
+    .setDescription(`Information on other artists who also do chopped and screwed vocals or plunderphonics as they are offically called, or pogo-like/pogo styled music. And I will be providing links the place they upload/used to upload often:`)
     .setColor("RANDOM")
     .addField('Blujaymix', `I am a goofy goober who mixes with samples (/o3o)/: https://soundcloud.com/blujay55555`, true)
     .addField('OneSimpleGamer', `Video Editor and Music Creator: https://www.youtube.com/channel/UCjhrBvrgZI44KceWCAbqsfQ`, true)
