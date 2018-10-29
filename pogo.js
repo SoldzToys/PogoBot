@@ -14,7 +14,7 @@ client.on('message', async (message) => {
 
 if (message.content.toLowerCase().startsWith(`${prefix}pogoinfo`)) {	 
     let BSHFTW = "https://www.youtube.com/user/BSHFTW/featured"
-    let pogo = "https://i.imgur.com/HrAnGFw.png"
+    let pogo = "https://image.ibb.co/ihBqa0/HrAnGFw.png"
     let pogoembed = new Discord.RichEmbed()
     .setTitle("<:nick:502697290532913152> Pogomix")
     .setURL('https://soundcloud.com/pogomix/')
@@ -33,7 +33,7 @@ if (message.content.toLowerCase().startsWith(`${prefix}pogoinfo`)) {
     .addField(`POGO's Website`, `http://www.pogomix.net/`, true)
     .addField(`POGO's Other YT Channel`, `https://www.youtube.com/channel/UCG3aXJ4HoDugcg_E0E4y2VA`, true)
     .addField(`Archive Channel`, `${BSHFTW}`, true)
-    .setImage("https://i.imgur.com/kpteGYu.png")
+    .setImage("https://image.ibb.co/kc8a8L/kpteGYu.png")
     .setFooter("Pogo Music", `${client.user.displayAvatarURL}`)
     .setThumbnail(pogo) 
     .setTimestamp();
@@ -177,7 +177,7 @@ if (message.content.toLowerCase().startsWith(`${prefix}serverinfo`)) {
 	}
 			
  if (message.content.toLowerCase().startsWith(`${prefix}info`)) {
-    let pogo = "https://i.imgur.com/kpteGYu.png"	 
+    let pogo = "https://image.ibb.co/kc8a8L/kpteGYu.png"	 
     let infoembed = new Discord.RichEmbed()
     .setTitle("<:pogonick:502699143878148097> More Information About POGO")
     .setDescription(`Fun Fact: POGO/Nick Bertke turned 30 years old in 2018!`)
