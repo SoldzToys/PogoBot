@@ -205,7 +205,7 @@ let result = Math.floor((Math.random() * replies.length));
                 .setTitle(`🎧 Random Remix`)
                .setDescription(replies[result])
                 .setColor("RANDOM")
-	        .setImage(replies[result].image_url)
+	        .setImage(replies[result].image)
 	return message.channel.send(randomembed);
    }
 });
