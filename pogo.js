@@ -130,16 +130,18 @@ if(!user) return message.channel.send("You haven't selected/mentioned a user who
 if (message.content.toLowerCase().startsWith(`${prefix}serverinfo`)) {		
     let sicon = message.guild.iconURL;
     let server = message.guild.name;
+    let rolesize = message.guild.roles.size - 1;
+    let realtotal = message.guild.memberCount - message.guild.members.filter(m => m.user.bot).size;
     let serverembed = new Discord.RichEmbed()
     .setTitle("👑 Server Information")
     .setDescription(`Information on ${server}:`)
     .setColor("RANDOM")
     .addField('Server ID', message.guild.id, true)
     .addField('Server Name', message.guild.name, true)
-    .addField('Humans', `${message.guild.members.filter(m => !m.user.bot).size}`, true)
+    .addField('Humans', `${realtotal}`, true)
     .addField('Bots', `${message.guild.members.filter(m => m.user.bot).size}`, true)
     .addField('Member Total', message.guild.memberCount, true)
-    .addField('Role Total', message.guild.roles.size, true)
+    .addField('Role Count', `${rolesize}`, true)
     .addField('Channel Total', message.guild.channels.size, true)
     .addField('Region', message.guild.region, true) 
     .addField('Made On', message.guild.createdAt.toLocaleDateString(), true)
