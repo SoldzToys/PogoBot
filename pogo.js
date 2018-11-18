@@ -199,7 +199,7 @@ if (message.content.toLowerCase().startsWith(`${prefix}serverinfo`)) {
     .addField("The Visa, The US, and The POGO", "As many fans know, pogo was banned from the US after an incident with his visa back in 2011 and was put on a 10 year ban from coming back which is thankfully over in 2021 and he will be allowed to return to the USA. The old video of him explaining this is most likely gone for some reason not sure why. He even spent 3 weeks in prison, which he talks about that and the visa thing [here.](https://youtu.be/PErGN3QuE34?t=7708)")
     .addField("POGO's Sub Count", `Back in 2011, POGO used to have over 1.5 million subs (which explains why in some videos you can see a 1M Play Button) before the visa issue that got him to lose over 70-74% of his subs at the time. Leaving him at around 430-450k subs after he got released, and you couldn't subscribe to him either at the time.`) 
     .addField("POGO Tips", "Want some advice on how to start out on making music? [Pogo Tips.](https://www.youtube.com/watch?v=nSlBiBu6-fs)")
-    .addField("POGO's Politics", "Did you know that Pogo has a political opinion?! There are many videos, but this is one of the [*favs*](https://youtu.be/PErGN3QuE34?t=4695)")
+    .addField("POGO's Politics", "Did you know that Pogo has a political opinion?! There are many videos, but this is one of the [*favorites.*](https://youtu.be/PErGN3QuE34?t=4695)")
     .setFooter("Fun Fact: This bot used to be an upload informer for the creator.", `${client.user.displayAvatarURL}`)
     .setThumbnail(pogo)      
     .setTimestamp();
