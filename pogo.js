@@ -15,8 +15,9 @@ client.on('message', async (message) => {
 if (message.content.toLowerCase().startsWith(`${prefix}pogoinfo`)) {	 
     let BSHFTW = "https://www.youtube.com/user/BSHFTW/featured"
     let pogo = "https://image.ibb.co/ihBqa0/HrAnGFw.png"
+    let nick = "https://image.ibb.co/f5nsX0/nick.png"
     let pogoembed = new Discord.RichEmbed()
-    .setTitle("<:nick:502697290532913152> Pogomix")
+    .setAuthor("Pogomix", nick)
     .setURL('https://soundcloud.com/pogomix/')
     .setDescription(`Information on **POGO:**`)
     .setColor("RANDOM")
@@ -26,7 +27,7 @@ if (message.content.toLowerCase().startsWith(`${prefix}pogoinfo`)) {
     .addField(`POGO's Instagram` , `[Instagram](https://www.instagram.com/pogomix/?hl=en)` , true)
     .addField(`POGO's Twitch`, `[Twitch](https://www.twitch.tv/pogoism)`)
     .addField(`POGO's Spotify`, `[Spotify](https://open.spotify.com/artist/1ng3xz2dyz57Z1WpnzM2G7)`, true)
-    .addField(`POGO's SoundCloud`, `[SoundCloud][(https://soundcloud.com/pogomix/)`, true)
+    .addField(`POGO's SoundCloud`, `[SoundCloud](https://soundcloud.com/pogomix/)`, true)
     .addField(`POGO's iTunes`, `[iTunes](https://itunes.apple.com/us/artist/pogo/id215124992)`, true)
     .addField(`POGO's Facebook`, `[Facebook](https://www.facebook.com/officialpogomusic/)`, true)
     .addField(`POGO's Bandcamp`, `[Bandcamp](https://pogomix.bandcamp.com/)`)
@@ -42,8 +43,9 @@ if (message.content.toLowerCase().startsWith(`${prefix}pogoinfo`)) {
 	
 	if (message.content.toLowerCase().startsWith(`${prefix}artistinfo`)) {		
     let sicon = message.guild.iconURL;
+    let pogoears = "https://image.ibb.co/eYf1QL/451822330801291294.png"
     let blujayembed = new Discord.RichEmbed()
-    .setAuthor("<:pogobunny:502698235845017611> Other C&S/Plunderphonic Artists!")
+    .setAuthor("Other C&S/Plunderphonic Artists!", pogoears)
     //.setTitle("<:pogobunny:502698235845017611> Other C&S/Plunderphonic Artists!")
     .setURL('https://discord.gg/TtarM43')
     .setDescription(`Information on other artists who also do chopped and screwed vocals or plunderphonics as they are offically called, or pogo-like/pogo styled music. And I will be providing links the place they upload/used to upload often:`)
@@ -111,8 +113,9 @@ if(!user) return message.channel.send("You haven't selected/mentioned a user who
 		  if (message.content.toLowerCase().startsWith(`${prefix}botinfo`)) {
 
     let bicon = client.user.displayAvatarURL;
+    let pogoears = "https://image.ibb.co/eYf1QL/451822330801291294.png"
     let botembed = new Discord.RichEmbed()
-    .setTitle("🤖 Bot Information")
+    .setAuthor("PogoBot Information", pogoears)
     .setDescription(`Information on ${client.user.username}`)
     .setColor("RANDOM")
     .setThumbnail(bicon)
@@ -180,9 +183,10 @@ if (message.content.toLowerCase().startsWith(`${prefix}serverinfo`)) {
 	}
 			
  if (message.content.toLowerCase().startsWith(`${prefix}info`)) {
-    let pogo = "https://image.ibb.co/kc8a8L/kpteGYu.png"	 
+    let pogo = "https://image.ibb.co/kc8a8L/kpteGYu.png"	
+    let pogonick "https://image.ibb.co/bTtSzf/pogonick.png"
     let infoembed = new Discord.RichEmbed()
-    .setTitle("<:pogonick:502699143878148097> More Information About POGO")
+    .setAuthor("More Information About POGO", pogonick)
     .setDescription(`Fun Fact: POGO/Nick Bertke turned 30 years old in 2018!`)
     .setColor("RANDOM")
     .addField("Is Nick a Homophobic Bigot? ", `To answer the question straightforwardly, no. Pogo addresses this in detail in a video, that is now taken down, but Pewdiepie talks about this in a video and shows the video. I'd suggest watching this for more information on the subject: https://youtu.be/_nChWc24ZM4?t=38` , true)
