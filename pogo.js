@@ -44,9 +44,9 @@ if (message.content.toLowerCase().startsWith(`${prefix}pogoinfo`)) {
 	
 	if (message.content.toLowerCase().startsWith(`${prefix}artistinfo`)) {		
     let sicon = message.guild.iconURL;
-    let pogoears = "https://image.ibb.co/eYf1QL/451822330801291294.png"
+    let pogobunny = "https://image.ibb.co/eYf1QL/451822330801291294.png"
     let blujayembed = new Discord.RichEmbed()
-    .setAuthor("Other C&S/Plunderphonic Artists!", pogoears)
+    .setAuthor("Other C&S/Plunderphonic Artists!", pogobunny)
     //.setTitle("<:pogobunny:502698235845017611> Other C&S/Plunderphonic Artists!")
     .setURL('https://discord.gg/TtarM43')
     .setDescription(`Information on other artists who also do chopped and screwed vocals or plunderphonics as they are offically called, or pogo-like/pogo styled music. And I will be providing links the place they upload/used to upload often:`)
