@@ -190,7 +190,7 @@ if (message.content.toLowerCase().startsWith(`${prefix}serverinfo`)) {
     .setAuthor("More Information About POGO", pogonick)
     .setDescription(`Fun Fact: POGO/Nick Bertke turned 30 years old in 2018!`)
     .setColor("RANDOM")
-    .addField("Is Nick a Homophobic Bigot? ", `To answer the question straightforwardly, no. Pogo addresses this in detail in a video, that is now taken down, but Pewdiepie talks about this in a video and shows the video. I'd suggest watching this for more information on the subject: [YouTube](https://youtu.be/_nChWc24ZM4?t=38)` , true)
+    .addField("Is Nick a Homophobic Bigot? ", `To answer the question straightforwardly, no. Pogo addresses this in detail in a video, that is now taken down, but Pewdiepie talks about this in a video and shows the video. I'd suggest watching this for more information on the subject: [YouTube.](https://youtu.be/_nChWc24ZM4?t=38)` , true)
     .addField("POGO's Real Name", "Christopher Nicholas Bertke.", true)
     .addField("Most Popular YouTube Video", "Over a decade ago POGO uploaded his famous Alice disney remix and today sits at 22M views!")
     .addField("Location: Australia", "Did you know that Smuffy and POGO live in the same country? Crazy right?")
