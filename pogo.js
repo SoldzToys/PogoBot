@@ -17,10 +17,11 @@ if (message.content.toLowerCase().startsWith(`${prefix}pogoinfo`)) {
     let pogo = "https://image.ibb.co/ihBqa0/HrAnGFw.png"
     let nick = "https://image.ibb.co/f5nsX0/nick.png"
     let pogoembed = new Discord.RichEmbed()
-    .setAuthor("Pogomix", nick)
-    .setURL('https://soundcloud.com/pogomix/')
-    .setDescription(`Information on **POGO:**`)
+//     .setAuthor("Pogomix", nick)
+//    // .setURL('https://soundcloud.com/pogomix/')
+//     .setDescription(`Information on **POGO:**`)
     .setColor("RANDOM")
+    .addField("<:nick:502697290532913152> Pogomix", "Information on **POGO:**")
     .addField('POGO Bio', `POGO is a YouTuber, musician, and most importantly an australian. He puts weird sounds into a blender and blasts them into a funky frappe for your earholes! He has been doing this on YouTube since Jun 7, 2007 (6/7/07), and has been making music as POGO since 2005. As of 10/17/18, he has over 211 MILLION views on YouTube alone with over 700k subs! Over a decade later He is still growing strong and inspiring new musicians.`)
     .addField(`POGO's YouTube Channel`, `[YouTube](https://www.youtube.com/user/Fagottron/featured)`, true)
     .addField(`POGO's Twitter`, `[Twitter](https://twitter.com/OfficialPogo?lang=en)`, true)
