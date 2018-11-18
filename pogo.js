@@ -185,7 +185,7 @@ if (message.content.toLowerCase().startsWith(`${prefix}serverinfo`)) {
 			
  if (message.content.toLowerCase().startsWith(`${prefix}info`)) {
     let pogo = "https://image.ibb.co/kc8a8L/kpteGYu.png"	
-    let pogonick "https://image.ibb.co/bTtSzf/pogonick.png"
+    let pogonick = "https://image.ibb.co/bTtSzf/pogonick.png"
     let infoembed = new Discord.RichEmbed()
     .setAuthor("More Information About POGO", pogonick)
     .setDescription(`Fun Fact: POGO/Nick Bertke turned 30 years old in 2018!`)
