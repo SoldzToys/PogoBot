@@ -157,27 +157,27 @@ if (message.content.toLowerCase().startsWith(`${prefix}serverinfo`)) {
     return message.channel.send(serverembed);
   }
 			
-			if (message.content.toLowerCase().startsWith(`${prefix}userinfo`)) {
+		if (message.content.startsWith(`${prefix}userinfo`)) {
 
             let player = message.mentions.members.first() || message.member
             let iicon = player.user.displayAvatarURL;
-            let roles = player.roles.map(role => role).join(" ");
+            let roles = player.roles.map(role => role).slice(1).join(" ") || "None";
 	    let user = player.user
-        if(!user) return message.channel.send("You haven't selected/mentioned a user whose info you want to see.");
+	    let rolesize = player.roles.size - 1;
             let userEmbed = new Discord.RichEmbed()
             .setAuthor(`${user.username}'s Info`, user.displayAvatarURL)
             .setThumbnail(user.displayAvatarURL)
             .setColor("RANDOM")
-            .addField('ID', user.id, true)
+            .addField('User ID', user.id, true)
             .addField('Current Tag', user.tag, true)
             .addField('Server Nickname', `${player.displayName}`, true) 
             .addField('Highest Member Role', `${player.highestRole.name}`, true)
-            .addField('Roles', `${roles}`)
+            .addField(`Roles [${rolesize}]`, `${roles}`)
             .addField('Game/Playing', `${(user.presence.game && user.presence.game && user.presence.game.name) || 'None'}`, true)
             .addField('Status', user.presence.status, true)
             .addField('Bot', user.bot, true)
-            .addField('Joined At:', `${player.joinedAt}`)
-            .addField('Created On:', `${player.user.createdAt}`)
+            .addField('Joined On:', `${player.joinedAt.toUTCString()}`)
+            .addField('Created On:', `${player.user.createdAt.toUTCString()}`)
             .setThumbnail(iicon)
             .setTimestamp();
 	return message.channel.send(userEmbed);
