@@ -55,7 +55,9 @@ if (message.content.toLowerCase().startsWith(`${prefix}pogoinfo`)) {
        .addField('DJ Casca', `[Idk what this is maybe it'll be something great.](https://www.youtube.com/channel/UC5EXg9_Umsf0CSDxnwnJWqw/featured)`)
        .addField('TheLeonors2', `[My Name Is Leonardo And I Make A Variety Of Music Videos.](https://www.youtube.com/user/TheLeonors2/featured)`)
        .addField('SusanHaywards', `[Hi! I'm K8](https://www.youtube.com/channel/UChBPYdg58wIvkergTSqPD5w)`)
-   //  .addField('', ``)
+       .addField('goldpikpikcarrots', `[Hey everyone! I'm David, a film and video editor from Hawaii! This channel is dedicated to music video edits I've made of tracks by remix artists.](https://www.youtube.com/user/goldpikpikcarrots)`)
+       .addField('Scott Andrew', `[Creativity is fundamental.](https://www.youtube.com/user/sukotto420/featured)`)
+       .addField('Peter Day 2', `[Everything that doesn't make sense on Peter Day!](https://www.youtube.com/channel/UC8E2r80_G6EvugN17tzZPTw/featured)`)
        .setThumbnail(sicon) 
        message.channel.send(videoeditorembed)
 	}
