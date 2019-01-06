@@ -261,7 +261,7 @@ client.on('guildMemberAdd', async (member) => {
   let guild = member.guild;
   let server = member.guild.name;
   let realtotal = guild.memberCount - guild.members.filter(m => m.user.bot).size;
-  let newmember = [`Welcome ${user}. Leave your weapons by the door.`, `${user} just joined. Everyone, look busy!`, `Ermagherd. ${user} is here.`, `Welcome, ${user}. We hope you brought pizza.`, `${user} has joined the server! It's super effective!`, `Never gonna give ${user} up. Never gonna let ${user} down.`, `Hello. Is it ${user} you're looking for?`, `${user} slid into the server.`, `Brace yourselves. ${user} just joined the server.`, `Where's ${user}? In the server!`, `${user} joined. You must construct additional pylons.`, `${user} hopped into the server. Kangaroo!!`, `Welcome, ${user}. We were expecting you ( ͡° ͜ʖ ͡°)`, `${user} just joined the server - glhf!`, `${user} just showed up. Hold my beer.`, `${user} has arrived. Party's over.`, `Challenger approaching - ${user} has appeared!`, `It's ${user}! Praise the sun! \[T]/`, `It's dangerous to go alone, take ${user}!`, `It's a bird! It's a plane! Nevermind, it's just ${user}`, `${user} is here to kick butt and chew bubblegum. And ${user} is all out of gum.`, `Cheers, love! ${user}'s here!`, `A ${user} has spawned in the server.`, `Wild turkey! ${user} go and catch it!`]
+  let newmember = [`What I Likes is ${user} being here.`, `I Want... ${user}!`, `Glad that ${user} could Jaaam their way over here.`, `Grow Fonder ${user}, Grow Fonder.`, `${user} has joined the server! Bloom-tastic!`, `There You Are, ${user}.`, `Aye Aye, ${user} has joined the server`, `Get More Into Music, ${user}. I'm guessing that is why you are here though.`, `One Day With You, ${user} is the best type of day.`, `Scrumdiddlyumptious ${user}!`, `${user} joined. Closure is coming.`, `Great scott! ${user} has found the Time Machine!`, `We were expecting you, ${user}. The Ghan will see you now.`, `Catchatronic use disk on ${user}!`, `Down the Mellow Brick Road, ${user}!`, `Davyd, it's dangerous to go alone, take ${user}!`, `Don't be disturbed by the Toyz Noize, ${user}.`, `${user} is here to kick butt and eat Bite Size Candies. And ${user} is all out of Bite Size Candies.`, `Play It Again, Sam. ${user}'s here.`, `Bangarang, ${user} has entered into the server.`]
   let result = Math.floor((Math.random() * newmember.length)); 
   let newcomer = guild.channels.find(c => c.name === 'newcomers');
   let embed = new Discord.RichEmbed()
@@ -270,11 +270,12 @@ client.on('guildMemberAdd', async (member) => {
      // .setFooter(`There are now ${realtotal} humans in the server.`, client.user.displayAvatarURL)
       .setTimestamp();
   newcomer.send(embed);
- member.addRole('531592148307673089');
+ member.addRole('451395867661041677');
 let welcomeembed = new Discord.RichEmbed()
 .setColor(0xc470fa)
 .addField(`Welcome ${user}!`, `Hey, thanks for joining The Pogo Discord. Please view the <#451397099339251716> page to see what the whole server is about. Meet new people, share music/creations and have fun! - <@272450070559850498>`)
-  try {
+.setImage("https://cdn.discordapp.com/attachments/502209845685125122/531595521941569539/pogo_discord.png")
+try {
    await member.send(welcomeembed)
     }catch(e){
     console.log("Eh, seems like their DMs were locked!")
