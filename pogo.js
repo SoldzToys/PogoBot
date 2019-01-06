@@ -256,7 +256,7 @@ let result = Math.floor((Math.random() * remixes.length));
    }
 });
 
-client.on('guildMemberAdd', member => {  
+client.on('guildMemberAdd', async (member) => {  
   let user = member.user.tag;
   let guild = member.guild;
   let server = member.guild.name;
@@ -270,6 +270,14 @@ client.on('guildMemberAdd', member => {
      // .setFooter(`There are now ${realtotal} humans in the server.`, client.user.displayAvatarURL)
       .setTimestamp();
   newcomer.send(embed);
+let welcomeembed = new Discord.RichEmbed()
+.setColor(0xc470fa)
+.addField(`Welcome ${user}!`, `Hey, thanks for joining The Pogo Discord. Please view the <#451397099339251716> page to see what the whole server is about. Meet new people, share music/creations and have fun! - <@272450070559850498>`)
+  try {
+   await member.send(welcomeembed)
+    }catch(e){
+    console.log("Eh, seems like their DMs were locked!")
+    }
 });
 
 client.on("guildUpdate", function (oldGuild, newGuild) {
