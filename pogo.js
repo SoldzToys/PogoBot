@@ -243,12 +243,12 @@ client.on('guildMemberAdd', member => {
   let newmember = [`Welcome ${user}. Leave your weapons by the door.`, `${user} just joined. Everyone, look busy!`, `Ermagherd. ${user} is here.`, `Welcome, ${user}. We hope you brought pizza.`, `${user} has joined the server! It's super effective!`, `Never gonna give ${user} up. Never gonna let ${user} down.`, `Hello. Is it ${user} you're looking for?`, `${user} slid into the server.`, `Brace yourselves. ${user} just joined the server.`, `Where's ${user}? In the server!`, `${user} joined. You must construct additional pylons.`, `${user} hopped into the server. Kangaroo!!`, `Welcome, ${user}. We were expecting you ( ͡° ͜ʖ ͡°)`, `${user} just joined the server - glhf!`, `${user} just showed up. Hold my beer.`, `${user} has arrived. Party's over.`, `Challenger approaching - ${user} has appeared!`, `It's ${user}! Praise the sun! \[T]/`, `It's dangerous to go alone, take ${user}!`, `It's a bird! It's a plane! Nevermind, it's just ${user}`, `${user} is here to kick butt and chew bubblegum. And ${user} is all out of gum.`, `Cheers, love! ${user}'s here!`, `A ${user} has spawned in the server.`, `Wild turkey! ${user} go and catch it!`]
   let result = Math.floor((Math.random() * newmember.length)); 
   let newcomer = guild.channels.find(c => c.name === 'newcomers');
-  let eembed = new Discord.RichEmbed()
+  let embed = new Discord.RichEmbed()
       .setColor()
       .setDescription(newmember[result])
      // .setFooter(`There are now ${realtotal} humans in the server.`, client.user.displayAvatarURL)
       .setTimestamp();
-  newcomer.send(eembed);
+  newcomer.send(embed);
 }
 });
 
