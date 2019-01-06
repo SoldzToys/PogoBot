@@ -13,7 +13,7 @@ require('moment-duration-format');
 });
 
 client.on('message', async (message) => {
-
+//
 if (message.content.toLowerCase().startsWith(`${prefix}pogoinfo`)) {	 
     let BSHFTW = "https://www.youtube.com/user/BSHFTW/featured"
     let pogo = "https://image.ibb.co/ihBqa0/HrAnGFw.png"
