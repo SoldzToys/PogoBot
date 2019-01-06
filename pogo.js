@@ -249,7 +249,6 @@ client.on('guildMemberAdd', member => {
      // .setFooter(`There are now ${realtotal} humans in the server.`, client.user.displayAvatarURL)
       .setTimestamp();
   newcomer.send(embed);
-}
 });
 
 client.on("guildUpdate", function (oldGuild, newGuild) {
