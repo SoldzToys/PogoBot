@@ -270,7 +270,7 @@ client.on('guildMemberAdd', async (member) => {
      // .setFooter(`There are now ${realtotal} humans in the server.`, client.user.displayAvatarURL)
       .setTimestamp();
   newcomer.send(embed);
-// member.addRole('451395867661041677');
+member.addRole('451395867661041677');
 let welcomeembed = new Discord.RichEmbed()
 .setColor(0xc470fa)
 .addField(`Welcome ${user}!`, `Hey, thanks for joining The Pogo Discord. Please view the <#451397099339251716> page to see what the whole server is about. Meet new people, share music/creations and have fun! - <@272450070559850498>`)
