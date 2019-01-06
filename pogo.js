@@ -43,7 +43,7 @@ if (message.content.toLowerCase().startsWith(`${prefix}pogoinfo`)) {
     return message.channel.send(pogoembed);
 }
 	
-	if (message.content.toLowerCase().startsWith(`${prefix}videoeditor`)) {
+	if (message.content.toLowerCase().startsWith(`${prefix}editorinfo`)) {
 		    let sicon = message.guild.iconURL;
     let pogobunny = "https://image.ibb.co/eYf1QL/451822330801291294.png"
        let videoeditorembed = new Discord.RichEmbed()
@@ -108,7 +108,7 @@ if (message.content.toLowerCase().startsWith(`${prefix}pogoinfo`)) {
 	.addField('💿 `p!artistinfo`', "Oh man, there are tons of other artists out there that do stuff like POGO so get on out there and support em! **WARNING**: Long list of people, beware.")
 	.addField('🖼 `p!avatar`', "Displays the avatar/pfp (profile picture) of yourself or any user you mention.")
 	.addField('🤖 `p!botinfo`', "Infomation on POGO bot.")
-        .addField('📹 `p!videoeditor`', "Want to see some videos made by fans amoung the POGO community?")
+        .addField('📹 `p!editorinfo`', "Want to see some videos made by fans amoung the POGO community?")
 	.addField('❓ `p!info`', "Information on little things and facts about POGO.")
         .addField('<:DONK:502699143287013386> `p!remix`', "Surprises you with a random remix from a generated queue of over 100 remixes.") 
 	.addField('🔌 `p!serverinfo`', `Infomation on ${server}.`)
