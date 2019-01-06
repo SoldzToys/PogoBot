@@ -8,7 +8,8 @@ require('moment-duration-format');
 
   client.on("ready", async () => {
   console.log(`${client.user.username} is on!`);
-  client.user.setActivity('Pogoism (p!help)', {type: "streaming", url: "https://www.twitch.tv/pogoism"});
+ // client.user.setActivity('Pogoism', {type: "streaming", url: "https://www.twitch.tv/pogoism"})
+    client.user.setActivity("POGO (p!help)", {type: "WATCHING"});
 });
 
 client.on('message', async (message) => {
