@@ -47,14 +47,16 @@ if (message.content.toLowerCase().startsWith(`${prefix}pogoinfo`)) {
 		    let sicon = message.guild.iconURL;
     let pogobunny = "https://image.ibb.co/eYf1QL/451822330801291294.png"
        let videoeditorembed = new Discord.RichEmbed()
-       .setAuthor("Plunderphobic Fan Video Editors", pogobunny)
+       .setAuthor("Plunderphobic Fan Video Editors!", pogobunny)
+       .setDescription(`Information on different fan video makers for different types of Plunderphobic artists:`)
        .setColor(0xc470fa)
        .setURL('https://www.youtube.com/watch?v=Je38hhYch5Y&feature=youtu.be')
        .addField('Dawn Bots INC.', `[Hey there, I'm a piano player who sucks at making remixes. So instead of that I make videos for remixes, makes sense huh?](https://www.youtube.com/channel/UCogcXVY_KnXdrHzOYE_zWIA/featured)`)
        .addField('DJ Casca', `[Idk what this is maybe it'll be something great.](https://www.youtube.com/channel/UC5EXg9_Umsf0CSDxnwnJWqw/featured)`)
        .addField('TheLeonors2', `[My Name Is Leonardo And I Make A Variety Of Music Videos.](https://www.youtube.com/user/TheLeonors2/featured)`)
        .addField('SusanHaywards', `[Hi! I'm K8](https://www.youtube.com/channel/UChBPYdg58wIvkergTSqPD5w)`)
-     //  .addField('', ``)
+   //  .addField('', ``)
+       .setThumbnail(sicon) 
        message.channel.send(videoeditorembed)
 	}
 	if (message.content.toLowerCase().startsWith(`${prefix}artistinfo`)) {		
