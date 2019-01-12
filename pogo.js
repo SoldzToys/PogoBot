@@ -14,7 +14,11 @@ require('moment-duration-format');
 
 client.on('message', async (message) => {
 //
-if (message.content.toLowerCase().startsWith(`${prefix}pogoinfo`)) {	 
+if (message.content.toLowerCase().startsWith(`${prefix}pogoinfo`)) {
+	  let nonoembed = new Discord.RichEmbed()
+			  .setColor(0xc470fa)
+			  .addField("We don't want spam!", "Sorry but you can only use my commands in <#531606891575377921>!")
+			  if (message.channel.name !== 'pogo-bot-channel') return message.channel.send(nonoembed).then(msg => msg.delete(10000))
     let BSHFTW = "https://www.youtube.com/user/BSHFTW/featured"
     let pogo = "https://image.ibb.co/ihBqa0/HrAnGFw.png"
     let nick = "https://image.ibb.co/f5nsX0/nick.png"
@@ -45,6 +49,10 @@ if (message.content.toLowerCase().startsWith(`${prefix}pogoinfo`)) {
 }
 	
 	if (message.content.toLowerCase().startsWith(`${prefix}editorinfo`)) {
+		  let nonoembed = new Discord.RichEmbed()
+			  .setColor(0xc470fa)
+			  .addField("We don't want spam!", "Sorry but you can only use my commands in <#531606891575377921>!")
+			  if (message.channel.name !== 'pogo-bot-channel') return message.channel.send(nonoembed).then(msg => msg.delete(10000))
 		    let sicon = message.guild.iconURL;
     let pogobunny = "https://image.ibb.co/eYf1QL/451822330801291294.png"
        let videoeditorembed = new Discord.RichEmbed()
@@ -62,7 +70,11 @@ if (message.content.toLowerCase().startsWith(`${prefix}pogoinfo`)) {
        .setThumbnail(sicon) 
        message.channel.send(videoeditorembed)
 	}
-	if (message.content.toLowerCase().startsWith(`${prefix}artistinfo`)) {		
+	if (message.content.toLowerCase().startsWith(`${prefix}artistinfo`)) {	
+		  let nonoembed = new Discord.RichEmbed()
+			  .setColor(0xc470fa)
+			  .addField("We don't want spam!", "Sorry but you can only use my commands in <#531606891575377921>!")
+			  if (message.channel.name !== 'pogo-bot-channel') return message.channel.send(nonoembed).then(msg => msg.delete(10000))
     let sicon = message.guild.iconURL;
     let pogobunny = "https://image.ibb.co/eYf1QL/451822330801291294.png"
     let blujayembed = new Discord.RichEmbed()
@@ -102,6 +114,10 @@ if (message.content.toLowerCase().startsWith(`${prefix}pogoinfo`)) {
 	
 
     if (message.content.toLowerCase().startsWith(`${prefix}help`)) {
+	      let nonoembed = new Discord.RichEmbed()
+			  .setColor(0xc470fa)
+			  .addField("We don't want spam!", "Sorry but you can only use my commands in <#531606891575377921>!")
+			  if (message.channel.name !== 'pogo-bot-channel') return message.channel.send(nonoembed).then(msg => msg.delete(10000))
 	let server = message.guild.name;
 	let helpembed = new Discord.RichEmbed()
 	.setTitle(`🎶 ${server} Commands`)
@@ -122,6 +138,10 @@ message.react("🎧")
   }
 		
 			 if (message.content.toLowerCase().startsWith(`${prefix}avatar`)) { 
+				   let nonoembed = new Discord.RichEmbed()
+			  .setColor(0xc470fa)
+			  .addField("We don't want spam!", "Sorry but you can only use my commands in <#531606891575377921>!")
+			  if (message.channel.name !== 'pogo-bot-channel') return message.channel.send(nonoembed).then(msg => msg.delete(10000))
       let player = message.mentions.members.first() || message.member
 	   let user = player.user
 if(!user) return message.channel.send("You haven't selected/mentioned a user whose avatar you want to see."); 
@@ -135,7 +155,10 @@ if(!user) return message.channel.send("You haven't selected/mentioned a user who
 }
 		
 		  if (message.content.toLowerCase().startsWith(`${prefix}botinfo`)) {
-
+  let nonoembed = new Discord.RichEmbed()
+			  .setColor(0xc470fa)
+			  .addField("We don't want spam!", "Sorry but you can only use my commands in <#531606891575377921>!")
+			  if (message.channel.name !== 'pogo-bot-channel') return message.channel.send(nonoembed).then(msg => msg.delete(10000))
     let bicon = client.user.displayAvatarURL;
     let pogoears = "https://image.ibb.co/eYf1QL/451822330801291294.png"
     let botembed = new Discord.RichEmbed()
@@ -155,7 +178,11 @@ if(!user) return message.channel.send("You haven't selected/mentioned a user who
   }      
 		
 	
-if (message.content.toLowerCase().startsWith(`${prefix}serverinfo`)) {		
+if (message.content.toLowerCase().startsWith(`${prefix}serverinfo`)) {	
+	  let nonoembed = new Discord.RichEmbed()
+			  .setColor(0xc470fa)
+			  .addField("We don't want spam!", "Sorry but you can only use my commands in <#531606891575377921>!")
+			  if (message.channel.name !== 'pogo-bot-channel') return message.channel.send(nonoembed).then(msg => msg.delete(10000))
     let sicon = message.guild.iconURL;
     let server = message.guild.name;
     let rolesize = message.guild.roles.size - 1;
@@ -186,7 +213,7 @@ if (message.content.toLowerCase().startsWith(`${prefix}serverinfo`)) {
 			  let nonoembed = new Discord.RichEmbed()
 			  .setColor(0xc470fa)
 			  .addField("We don't want spam!", "Sorry but you can only use my commands in <#531606891575377921>!")
-			  if ((message.channel.name !== 'pogo-bot-channel') && (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(nonoembed).then(msg => msg.delete(10000))
+			  if (message.channel.name !== 'pogo-bot-channel') return message.channel.send(nonoembed).then(msg => msg.delete(10000))
 			                  const status = {
         false: "Human",
         true: "Bot"
@@ -223,6 +250,10 @@ if (message.content.toLowerCase().startsWith(`${prefix}serverinfo`)) {
 	}
 
  if (message.content.toLowerCase().startsWith(`${prefix}info`)) {
+	   let nonoembed = new Discord.RichEmbed()
+			  .setColor(0xc470fa)
+			  .addField("We don't want spam!", "Sorry but you can only use my commands in <#531606891575377921>!")
+			  if (message.channel.name !== 'pogo-bot-channel') return message.channel.send(nonoembed).then(msg => msg.delete(10000))
     let pogo = "https://image.ibb.co/kc8a8L/kpteGYu.png"	
     let pogonick = "https://image.ibb.co/bTtSzf/pogonick.png"
     let infoembed = new Discord.RichEmbed()
@@ -247,6 +278,10 @@ if (message.content.toLowerCase().startsWith(`${prefix}serverinfo`)) {
   }  
 	
     if (message.content.toLowerCase().startsWith(`${prefix}remix`)) {
+	      let nonoembed = new Discord.RichEmbed()
+			  .setColor(0xc470fa)
+			  .addField("We don't want spam!", "Sorry but you can only use my commands in <#531606891575377921>!")
+			  if (message.channel.name !== 'pogo-bot-channel') return message.channel.send(nonoembed).then(msg => msg.delete(10000))
 let remixes = ['https://www.youtube.com/watch?v=Dj-Xn1l60io', "https://www.youtube.com/watch?v=vPrnQP-q3dc", "https://www.youtube.com/watch?v=oXjKfTjy7wA", "https://www.youtube.com/watch?v=--8oywtLG2I", "https://www.youtube.com/watch?v=mGEcMWyeSVk", "https://www.youtube.com/watch?v=8sX2vxwU7Vg", "https://www.youtube.com/watch?v=Y_RGCHos63I", "https://www.youtube.com/watch?v=tnlhWwRagAg", "https://www.youtube.com/watch?v=2L6POqtJ_Bk", "https://www.youtube.com/watch?v=lryVSUuAPyI", "https://www.youtube.com/watch?v=d6Ipsoz9w_I", "https://www.youtube.com/watch?v=e9X6D_5erLU", "https://www.youtube.com/watch?v=erb9aNcX0IU", "https://www.youtube.com/watch?v=G8pptpmkHXg&t=2s", "https://www.youtube.com/watch?v=_DvWP9hzEsc", "https://www.youtube.com/watch?v=lvgRO_ZntEI", "https://www.youtube.com/watch?v=5hOlNNznVwo", "https://www.youtube.com/watch?v=QaUmJdJ354w", "https://www.youtube.com/watch?v=4MbFSVzUI5I", "https://www.youtube.com/watch?v=073ZVf72Bj0", "https://www.youtube.com/watch?v=JPizGlTuBfk", "https://www.youtube.com/watch?v=GqDzYpzNiMI", "https://www.youtube.com/watch?v=6fCvJ1mTjqo", "https://www.youtube.com/watch?v=ewy3uXVLekA", "https://www.youtube.com/watch?v=qlEjC2ctb40", "https://www.youtube.com/watch?v=DkUmHT_wrsg", "https://www.youtube.com/watch?v=fDgSSMemnDk", "https://www.youtube.com/watch?v=6fGRj38N8bI&t=2s", "https://www.youtube.com/watch?v=fvOuWUKaszI", "https://www.youtube.com/watch?v=LG5saoOpsno", "https://www.youtube.com/watch?v=_YOYk9niqDI", "https://www.youtube.com/watch?v=fWJGNXoskVg", "https://www.youtube.com/watch?v=kD7GtZwweDk", "https://www.youtube.com/watch?v=1N65XUBJh8Y", "https://www.youtube.com/watch?v=JXcBHpeMBaQ", "https://www.youtube.com/watch?v=TUhCrPjOqe8&t=1s", "https://www.youtube.com/watch?v=_VHrh3R5p7U", "https://www.youtube.com/watch?v=kzDsODNcAOw", "https://www.youtube.com/watch?v=QUVn1flY0AA", "https://www.youtube.com/watch?v=hWe5sEkaCEU", "https://www.youtube.com/watch?v=JZXURBRGakM", "https://www.youtube.com/watch?v=ITtNW44QAAI", "https://www.youtube.com/watch?v=AZn6c4CeJCc", "https://www.youtube.com/watch?v=MvfkyURi89A", "https://www.youtube.com/watch?v=Q_Co7er4Vuk", "https://www.youtube.com/watch?v=PW5_GNG7q2w", "https://www.youtube.com/watch?v=5Xid6tLTg3c", "https://www.youtube.com/watch?v=lLJYLtz3Usw", "https://www.youtube.com/watch?v=xJ4-vj4zBcw", "https://www.youtube.com/watch?v=dDGfCt6m76w", "https://www.youtube.com/watch?v=yJ_DVIRUSyc&t=1s", "https://www.youtube.com/watch?v=BN90rckRV5Q", "https://www.youtube.com/watch?v=k4qJ1gbzUwQ", "https://www.youtube.com/watch?v=y8Eap60iY9c", "https://www.youtube.com/watch?v=11cSTaN16vI", "https://www.youtube.com/watch?v=nwU6zQc-Bv4&", "https://www.youtube.com/watch?v=CxqAKoCCWr4", "https://www.youtube.com/watch?v=SPbijgSYe_4", "https://www.youtube.com/watch?v=LzDh3Fs4ezU", "https://www.youtube.com/watch?v=VEc6sFOfSfw", "https://www.youtube.com/watch?v=32cnJhNh-Yo", "https://www.youtube.com/watch?v=Oe-X-Or36iI", "https://www.youtube.com/watch?v=DqDbBej2unk", "https://www.youtube.com/watch?v=OSmp2a6UsLg", "https://www.youtube.com/watch?v=nwU6zQc-Bv4", "https://soundcloud.com/blujay55555/a-h-h", "https://soundcloud.com/blujay55555/skylight", "https://soundcloud.com/derpsmcpineapple/pink-guy-asian-pizza-derpsmcpineapple-remix", "https://soundcloud.com/derpsmcpineapple/weightless-pogo-mashup", "https://soundcloud.com/farliechales/my-neighbor", "https://soundcloud.com/farliechales/fallonism", "https://soundcloud.com/voodoorising/blue-words", "https://soundcloud.com/voodoorising/my-world-alternate-2018-version", "https://soundcloud.com/p-sus/goodnight-cody-i-met-a-whale-psus-re-arrange", "https://soundcloud.com/p-sus/by-my-side", "https://soundcloud.com/ashley-chirnside/beautiful-night", "https://soundcloud.com/ashley-chirnside/magical-food", "https://soundcloud.com/musicofplus/kininarimasu", "https://soundcloud.com/simplynotmytrackz/its-jaaam-time-pogos-eleven-jaaam-but-simply-a-mashup-by-me", "https://soundcloud.com/simplynotmytrackz/cigars-cystal-meth", "https://www.youtube.com/watch?v=9PsedAXnEUo", "https://soundcloud.com/himynameiseugene/it-efryo-remix", "https://www.youtube.com/watch?v=hY8jmmUT1t4", "https://soundcloud.com/mrajaunte/the-polar-express-remix-wish-upon-a-star-mix", "https://soundcloud.com/mrajaunte/sugar-rush-mrajaunte", "https://soundcloud.com/mrajaunte/rag-tag-mrajaunte", "https://www.youtube.com/watch?v=vGrMQhowWIQ", "https://www.youtube.com/watch?v=Lc4s7okd9UQ", "https://www.youtube.com/watch?v=GFwwUaDpBhE", "https://www.youtube.com/watch?v=uN6g8JxVzXw", "https://www.youtube.com/watch?v=hU95tRlo8do&t", "https://www.youtube.com/watch?v=UBMIE0bhH5c", "https://www.youtube.com/watch?v=_e-bxdaleSg", "https://www.youtube.com/watch?v=nwRxpWjSVzc", "https://www.youtube.com/watch?v=XK1ysRZ8Wis", "https://www.youtube.com/watch?v=SqyPiowOSN8", "https://youtu.be/aZlmyCmaJ2k", "https://www.youtube.com/watch?v=eYBC5y5qbDY", "https://www.youtube.com/watch?v=xCKRI_3q13Q", "https://www.youtube.com/watch?v=QCPJajxWB3E", "https://www.youtube.com/watch?v=lEniNLf4SDg", "https://www.youtube.com/watch?v=XQRbZQ75v7o", "https://www.youtube.com/watch?v=0F5A-p2enH8", "https://www.youtube.com/watch?v=aVX1C1k1P34", "https://www.youtube.com/watch?v=9VM15kh0B50", "https://www.youtube.com/watch?v=eK32fuhSBKs", "https://www.youtube.com/watch?v=aqhVhPERQWc&t", "https://www.youtube.com/watch?v=bFV9kA_ooUs", "https://www.youtube.com/watch?v=CFx5mXwpqtk", "https://www.youtube.com/watch?v=KVJ0xPaXevs", "https://www.youtube.com/watch?v=W7RnB06Mj_4", "https://www.youtube.com/watch?v=zixCr-Il5fY", "https://www.youtube.com/watch?v=1Act-AacEtI"];
 let result = Math.floor((Math.random() * remixes.length)); 
 	let randomembed = new Discord.RichEmbed() 
