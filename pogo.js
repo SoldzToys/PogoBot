@@ -184,7 +184,7 @@ if (message.content.toLowerCase().startsWith(`${prefix}serverinfo`)) {
 		if (message.content.startsWith(`${prefix}userinfo`)) {
                          //if(message.author.id !== '363499842607120384', '272450070559850498') return;
 			  let nonoembed = new Discord.RichEmbed()
-			  .setColor(0xc470fa)
+			  .setColor("c470fa")
 			  .addField("We don't want spam!", "Sorry but you can only use my commands in <#531606891575377921>!")
 			  if ((message.channel.name !== 'pogo-bot-channel') && (message.author.id !== '363499842607120384', '272450070559850498')) return message.channel.send(nonoembed).then(msg => msg.delete(10000))\
 			                  const status = {
