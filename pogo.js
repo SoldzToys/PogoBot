@@ -182,6 +182,10 @@ if (message.content.toLowerCase().startsWith(`${prefix}serverinfo`)) {
   }
 	
 		if (message.content.startsWith(`${prefix}userinfo`)) {
+			  let nonoembed = new Discord.RichEmbed()
+			  .setColor(0xc470fa)
+			  .addField("We don't want spam!", "Sorry but you can only use my commands in <#531606891575377921>!")
+			  if (message.channel.name !== 'pogo-bot-channel') return message.channel.send(nonoembed).then(msg => msg.delete(10000))
 			                  const status = {
         false: "Human",
         true: "Bot"
