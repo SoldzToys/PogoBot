@@ -186,6 +186,12 @@ if (message.content.toLowerCase().startsWith(`${prefix}serverinfo`)) {
         false: "Human",
         true: "Bot"
       }
+					  const onlineofflineidlednd = {
+        online: "Online",
+        idle: "Idle",
+	dnd: "Do Not Disturb", 
+        offline: "Offline"
+      }
 	    let args = message.content.split(/ +/g).slice(1) 
             let player = message.mentions.members.first() || message.guild.members.find(mem => mem.user.id === args[0]) || message.guild.members.find(mem => mem.user.tag === args[0]) || message.guild.members.find(mem => mem.user.username === args[0]) || message.member
             let iicon = player.user.displayAvatarURL;
@@ -202,7 +208,7 @@ if (message.content.toLowerCase().startsWith(`${prefix}serverinfo`)) {
             .addField('Highest Member Role', `<@&${player.highestRole.id}>`, true)
             .addField(`Roles [${rolesize}]`, `${roles}`)
             .addField('Game/Playing', `${(user.presence.game && user.presence.game && user.presence.game.name) || 'None'}`, true)
-            .addField('Status', user.presence.status, true)
+            .addField('Status', onlineofflineidlednd[user.presence.status], true)
             .addField('Bot/Human', status[user.bot], true)
             .addField('Joined Server On:', `${moment2(player.joinedAt).format('LLLL')}` + '\n' + `${player.user.tag} joined` + ' ' + moment2(new Date()).diff(player.joinedAt, 'days') + ' days ago')
             .addField('Account Created On:', `${moment2(player.user.createdAt).format('LLLL')}`)
@@ -262,7 +268,7 @@ client.on('guildMemberAdd', async (member) => {
   let guild = member.guild;
   let server = member.guild.name;
   let realtotal = guild.memberCount - guild.members.filter(m => m.user.bot).size;
-  let newmember = [`What I Likes is ${user} being here.`, `I Want... ${user}!`, `Glad that ${user} could Jaaam their way over here.`, `Grow Fonder ${user}, Grow Fonder.`, `${user} has joined the server! Bloom-tastic!`, `There You Are, ${user}.`, `Aye Aye, ${user} has joined the server`, `Get More Into Music, ${user}. I'm guessing that is why you are here though.`, `One Day With You, ${user} is the best type of day.`, `Scrumdiddlyumptious ${user}!`, `${user} joined. Closure is coming.`, `Great scott! ${user} has found the Time Machine!`, `We were expecting you, ${user}. The Ghan will see you now.`, `Catchatronic use disk on ${user}!`, `Down the Mellow Brick Road, ${user}!`, `Davyd, it's dangerous to go alone, take ${user}!`, `Don't be disturbed by the Toyz Noize, ${user}.`, `${user} is here to kick butt and eat Bite Size Candies. And ${user} is all out of Bite Size Candies.`, `Play It Again, Sam. ${user}'s here.`, `Bangarang, ${user} has entered into the server.`]
+  let newmember = [`What I Likes is ${user} being here.`, `I Want... ${user}!`, `Glad that ${user} could Jaaam their way over here.`, `Grow Fonder ${user}, Grow Fonder.`, `${user} has joined the server! Bloom-tastic!`, `There You Are, ${user}.`, `Aye Aye, ${user} has joined the server.`, `Get More Into Music, ${user}. I'm guessing that is why you are here though.`, `One Day With You, ${user} is the best type of day.`, `Scrumdiddlyumptious ${user}!`, `${user} joined. Closure is coming.`, `Great scott! ${user} has found the Time Machine!`, `We were expecting you, ${user}. The Ghan will see you now.`, `Catchatronic use disk on ${user}!`, `Down the Mellow Brick Road, ${user}!`, `Davyd, it's dangerous to go alone, take ${user}!`, `Don't be disturbed by the Toyz Noize, ${user}.`, `${user} is here to kick butt and eat Bite Size Candies. And ${user} is all out of Bite Size Candies.`, `Play It Again, Sam. ${user}'s here.`, `Bangarang, ${user} has entered into the server.`]
   let result = Math.floor((Math.random() * newmember.length)); 
   let newcomer = guild.channels.find(c => c.name === 'newcomers');
   let embed = new Discord.RichEmbed()
