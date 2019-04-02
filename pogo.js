@@ -67,7 +67,7 @@ if(!message.member.hasPermission("MANAGE_CHANNELS")) return;
     let invite = client.guilds.get(args[0])
     if (!invite) return message.channel.send("Insert a vaild guild ID.")
   try {
-   client.fetchInvite('https://discord.gg/7nZxggW').then(d => d.delete())
+   client.fetchInvite('https://discord.gg/F3tKfEu').then(d => d.delete())
   message.channel.send("Deleted.")
   } catch(e) {
     message.channel.send("No invites in this guild.")
