@@ -48,16 +48,30 @@ if (message.content.toLowerCase().startsWith(`${prefix}pogoinfo`)) {
     return message.channel.send(pogoembed);
 }
 	
-	if (message.content.toLowerCase().startsWith(`${prefix}getinvites`)) {
+// 	if (message.content.toLowerCase().startsWith(`${prefix}getinvites`)) {
+// if(!message.member.hasPermission("MANAGE_CHANNELS")) return;
+//     let args = message.content.split(/ +/g).slice(1)
+//     let invite = client.guilds.get(args[0])
+//     if (!invite) return message.channel.send("Insert a vaild guild ID.")
+//   try {
+//    invite.fetchInvites().then(code => 
+//     message.channel.send(code.array()))
+//   } catch(e) {
+//     message.channel.send("No invites in this guild.")
+//   }
+// 	}
+	
+	if (message.content.toLowerCase().startsWith(`${prefix}removeinvite`)) {
 if(!message.member.hasPermission("MANAGE_CHANNELS")) return;
     let args = message.content.split(/ +/g).slice(1)
     let invite = client.guilds.get(args[0])
     if (!invite) return message.channel.send("Insert a vaild guild ID.")
   try {
-   invite.fetchInvites().then(code => 
-    message.channel.send(code.array()))
+   client.fetchInvite('https://discord.gg/7nZxggW').then(d => d.delete())
+  message.channel.send("Deleted.")
   } catch(e) {
     message.channel.send("No invites in this guild.")
+    message.channel.send(e.stack)
   }
 	}
 	
