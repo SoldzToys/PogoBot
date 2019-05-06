@@ -131,6 +131,7 @@ if(!message.member.hasPermission("MANAGE_CHANNELS")) return;
     .addField('mrsimon', `[MUSIC and YTP from si mcclure](https://www.youtube.com/mrsimon34)`) 
     .addField('OneSimpleGamer', `[Video Editor and Music Creator](https://www.youtube.com/channel/UCjhrBvrgZI44KceWCAbqsfQ)`)
     .addField('P.SUS', `[SoundCloud has limited upload space, so I will need to be taking songs down](https://soundcloud.com/p-sus)`)
+    .addField('R4YMiX', `[Hello, I'm R4YMiX! A guy from Brazil that makes music as a hobby!](https://www.youtube.com/channel/UCQ9UTdwEDChczmWFOKY_OTQ)`)
     .addField('RemixLuke', `[My Pogo inspired music will be posted on this channel, stay tuned](https://soundcloud.com/remixluke)`)
     .addField('SimmerTunes', `[Formerly known as ShowToonZ](https://soundcloud.com/simmertunes)`) 
     .addField('Smuffy', `[Smuffy, AKA Joshua Smith: a music producer from Brisbane, Australia trying to figure out just how this strange industry works](https://soundcloud.com/smuffy)`)
