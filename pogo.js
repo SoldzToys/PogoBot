@@ -102,43 +102,88 @@ if(!message.member.hasPermission("MANAGE_CHANNELS")) return;
 			  .setColor(0xc470fa)
 			  .addField("We don't want spam!", "Sorry but you can only use my commands in <#531606891575377921>!")
 			  if (message.channel.name !== 'pogo-bot-channel') return message.channel.send(nonoembed).then(msg => msg.delete(10000))
-    let sicon = message.guild.iconURL;
-    let pogobunny = "https://image.ibb.co/eYf1QL/451822330801291294.png"
-    let blujayembed = new Discord.RichEmbed()
+//     let sicon = message.guild.iconURL;
+//     let pogobunny = "https://image.ibb.co/eYf1QL/451822330801291294.png"
+//     let blujayembed = new Discord.RichEmbed()
+//     .setAuthor("Other C&S/Plunderphonic Artists!", pogobunny)
+//     //.setTitle("<:pogobunny:502698235845017611> Other C&S/Plunderphonic Artists!")
+//     .setURL('https://www.youtube.com/watch?v=TdcaqS5YUlM&index=1&list=PLLvtWLHvnsz3WfKOLkQiKQZBoM9EoRg_B')
+//     .setDescription(`Information on other artists who also do chopped and screwed vocals or plunderphonics as they are offically called, or pogo-like/pogo styled music. And I will be providing links the place they upload/used to upload often:`)
+//     .setColor(0xc470fa)
+//     .addField('Ashley Chirnside', `[Ashley Chirnside](https://soundcloud.com/ashley-chirnside)`)
+//     .addField('AtlasGeneticist', `[I post here every once in a while and plan to release a lot more once I'm used to music making](https://soundcloud.com/somethingworks)`)
+//     .addField('Avery Blue', `[Follow me on a musical adventure of learning and fun](https://www.youtube.com/channel/UCjN5hZ33RhSsOsZwkUS20Yw/featured)`)
+//     .addField('Ben Storey', `[I like to fiddle around with sounds](https://www.youtube.com/user/OoFrenchyo/featured)`)
+//     .addField('Blujaymix', `[I am a goofy goober who mixes with samples (/o3o)/](https://soundcloud.com/blujay55555)`)
+//     .addField('Clod B', `[I make music sometimes ◙▒◙♫♩♬](https://soundcloud.com/clod-b)`)
+//     .addField('DerpsMcPinapple', `[I like making music and memes I guess. Meme-Music](https://soundcloud.com/derpsmcpineapple)`)   
+//     .addField('efryo - MusicOfPlus', `[I'm fascinated by music and the different ways it can be put together](https://www.youtube.com/user/efryo/featured)`)   
+//     .addField('Geshtro', `[Geshtro](https://soundcloud.com/geshtro)`)
+//     .addField('HomeStarRunnerTron', `[I'm AWOL from the Internet until November 2018!](https://www.youtube.com/user/HomeStarRunnerTron/featured)`)
+//     .addField('IDGlitch', `[IDM, Ambient, and trying different things every time.](https://soundcloud.com/idglitch)`)
+//     .addField('Jawka', `[Jawka](https://soundcloud.com/jawka)`)    
+//     .addField('Jeesh', `[I like to think I'm painting with sound but, that sounds far too pretentious](https://soundcloud.com/jeesh)`)
+//     .addField('Jyndo', `[Experimental electronic. (And some jazz beats)](https://soundcloud.com/thejyndo)`)
+//     .addField('Julow', `[Julow (ex Jules Kennedvitch)](https://soundcloud.com/voodoorising)`)
+//     .addField('liltommyj', `[If you like remixes of things then you should LEAVE IMMEDIATELY](https://www.youtube.com/user/liltommyj/featured)`)
+//     .addField('MrAjaunte', `[Plunder-Music....Phonics....PLUNDERPHONICS](https://soundcloud.com/mrajaunte)`)
+//     .addField('Mr. Heuer', `[I'm just some dude from Southern Indiana](https://www.youtube.com/user/MrHeuer1/featured)`)
+//     .addField('mrsimon', `[MUSIC and YTP from si mcclure](https://www.youtube.com/mrsimon34)`) 
+//     .addField('OneSimpleGamer', `[Video Editor and Music Creator](https://www.youtube.com/channel/UCjhrBvrgZI44KceWCAbqsfQ)`)
+//     .addField('P.SUS', `[SoundCloud has limited upload space, so I will need to be taking songs down](https://soundcloud.com/p-sus)`)
+//     .addField('R4YMiX', `[Hello, I'm R4YMiX! A guy from Brazil that makes music as a hobby!](https://www.youtube.com/channel/UCQ9UTdwEDChczmWFOKY_OTQ)`)
+//     .addField('RemixLuke', `[My Pogo inspired music will be posted on this channel, stay tuned](https://soundcloud.com/remixluke)`)
+//     .addField('SimmerTunes', `[Formerly known as ShowToonZ](https://soundcloud.com/simmertunes)`) 
+//     .addField('Smuffy', `[Smuffy, AKA Joshua Smith: a music producer from Brisbane, Australia trying to figure out just how this strange industry works](https://soundcloud.com/smuffy)`)
+//     .addField('ThinkFishTank', `[Plunderphonics artist from Maine](https://soundcloud.com/thinkfishtank)`)
+//     .setFooter("If you would like more people you think should be added, contact me at Soldz (CF)#6819.", `${client.user.displayAvatarURL}`)
+//     .setThumbnail(sicon) 
+//     return message.channel.send(blujayembed);
+		   let pages = [`Ashley Chirnside - [Ashley Chirnside](https://soundcloud.com/ashley-chirnside) \n AtlasGeneticist - [I post here every once in a while and plan to release a lot more once I'm used to music making](https://soundcloud.com/somethingworks) \n Avery Blue - [Follow me on a musical adventure of learning and fun](https://www.youtube.com/channel/UCjN5hZ33RhSsOsZwkUS20Yw/featured) \n Ben Storey - [I like to fiddle around with sounds](https://www.youtube.com/user/OoFrenchyo/featured) \n Blujaymix - [I am a goofy goober who mixes with samples (/o3o)/](https://soundcloud.com/blujay55555) \n Clod B - [I make music sometimes ◙▒◙♫♩♬](https://soundcloud.com/clod-b) \n DerpsMcPinapple - [I like making music and memes I guess. Meme-Music](https://soundcloud.com/derpsmcpineapple) \n efryo/MusicOfPlus - [I'm fascinated by music and the different ways it can be put together](https://www.youtube.com/user/efryo/featured) \n Geshtro - [Geshtro](https://soundcloud.com/geshtro) \n HomeStarRunnerTron - [I'm AWOL from the Internet until November 2018!](https://www.youtube.com/user/HomeStarRunnerTron/featured) \n IDGlitch - [IDM, Ambient, and trying different things every time.](https://soundcloud.com/idglitch) \n Jawka - [Jawka](https://soundcloud.com/jawka) \n Jeesh - [I like to think I'm painting with sound but, that sounds far too pretentious](https://soundcloud.com/jeesh) \n Jyndo - [Experimental electronic. (And some jazz beats)](https://soundcloud.com/thejyndo) \n Julow - [Julow (ex Jules Kennedvitch)](https://soundcloud.com/voodoorising)`, 
+  `liltommyj - [If you like remixes of things then you should LEAVE IMMEDIATELY](https://www.youtube.com/user/liltommyj/featured) \n MrAjaunte - [Plunder-Music....Phonics....PLUNDERPHONICS](https://soundcloud.com/mrajaunte) \n Mr. Heuer - [I'm just some dude from Southern Indiana](https://www.youtube.com/user/MrHeuer1/featured) \n mrsimon - [MUSIC and YTP from si mcclure](https://www.youtube.com/mrsimon34) \n OneSimpleGamer - [Video Editor and Music Creator](https://www.youtube.com/channel/UCjhrBvrgZI44KceWCAbqsfQ) \n P.SUS - [SoundCloud has limited upload space, so I will need to be taking songs down](https://soundcloud.com/p-sus) \n R4YMiX - [Hello, I'm R4YMiX! A guy from Brazil that makes music as a hobby!](https://www.youtube.com/channel/UCQ9UTdwEDChczmWFOKY_OTQ) \n RemixLuke - [My Pogo inspired music will be posted on this channel, stay tuned](https://soundcloud.com/remixluke) \n SimmerTunes - [Formerly known as ShowToonZ](https://soundcloud.com/simmertunes) \n Smuffy - [Smuffy, AKA Joshua Smith: a music producer from Brisbane, Australia trying to figure out just how this strange industry works](https://soundcloud.com/smuffy) \n ThinkFishTank - [Plunderphonics artist from Maine](https://soundcloud.com/thinkfishtank)`]
+  // '']; 
+  let page = 1; 
+  let pogobunny = "https://image.ibb.co/eYf1QL/451822330801291294.png"
+  let sicon = message.guild.iconURL;
+ const embed = new Discord.RichEmbed() 
     .setAuthor("Other C&S/Plunderphonic Artists!", pogobunny)
-    //.setTitle("<:pogobunny:502698235845017611> Other C&S/Plunderphonic Artists!")
-    .setURL('https://www.youtube.com/watch?v=TdcaqS5YUlM&index=1&list=PLLvtWLHvnsz3WfKOLkQiKQZBoM9EoRg_B')
-    .setDescription(`Information on other artists who also do chopped and screwed vocals or plunderphonics as they are offically called, or pogo-like/pogo styled music. And I will be providing links the place they upload/used to upload often:`)
+    .setDescription(pages[page-1])
     .setColor(0xc470fa)
-    .addField('Ashley Chirnside', `[Ashley Chirnside](https://soundcloud.com/ashley-chirnside)`)
-    .addField('AtlasGeneticist', `[I post here every once in a while and plan to release a lot more once I'm used to music making](https://soundcloud.com/somethingworks)`)
-    .addField('Avery Blue', `[Follow me on a musical adventure of learning and fun](https://www.youtube.com/channel/UCjN5hZ33RhSsOsZwkUS20Yw/featured)`)
-    .addField('Ben Storey', `[I like to fiddle around with sounds](https://www.youtube.com/user/OoFrenchyo/featured)`)
-    .addField('Blujaymix', `[I am a goofy goober who mixes with samples (/o3o)/](https://soundcloud.com/blujay55555)`)
-    .addField('Clod B', `[I make music sometimes ◙▒◙♫♩♬](https://soundcloud.com/clod-b)`)
-    .addField('DerpsMcPinapple', `[I like making music and memes I guess. Meme-Music](https://soundcloud.com/derpsmcpineapple)`)   
-    .addField('efryo - MusicOfPlus', `[I'm fascinated by music and the different ways it can be put together](https://www.youtube.com/user/efryo/featured)`)   
-    .addField('Geshtro', `[Geshtro](https://soundcloud.com/geshtro)`)
-    .addField('HomeStarRunnerTron', `[I'm AWOL from the Internet until November 2018!](https://www.youtube.com/user/HomeStarRunnerTron/featured)`)
-    .addField('IDGlitch', `[IDM, Ambient, and trying different things every time.](https://soundcloud.com/idglitch)`)
-    .addField('Jawka', `[Jawka](https://soundcloud.com/jawka)`)    
-    .addField('Jeesh', `[I like to think I'm painting with sound but, that sounds far too pretentious](https://soundcloud.com/jeesh)`)
-    .addField('Jyndo', `[Experimental electronic. (And some jazz beats)](https://soundcloud.com/thejyndo)`)
-    .addField('Julow', `[Julow (ex Jules Kennedvitch)](https://soundcloud.com/voodoorising)`)
-    .addField('liltommyj', `[If you like remixes of things then you should LEAVE IMMEDIATELY](https://www.youtube.com/user/liltommyj/featured)`)
-    .addField('MrAjaunte', `[Plunder-Music....Phonics....PLUNDERPHONICS](https://soundcloud.com/mrajaunte)`)
-    .addField('Mr. Heuer', `[I'm just some dude from Southern Indiana](https://www.youtube.com/user/MrHeuer1/featured)`)
-    .addField('mrsimon', `[MUSIC and YTP from si mcclure](https://www.youtube.com/mrsimon34)`) 
-    .addField('OneSimpleGamer', `[Video Editor and Music Creator](https://www.youtube.com/channel/UCjhrBvrgZI44KceWCAbqsfQ)`)
-    .addField('P.SUS', `[SoundCloud has limited upload space, so I will need to be taking songs down](https://soundcloud.com/p-sus)`)
-    .addField('R4YMiX', `[Hello, I'm R4YMiX! A guy from Brazil that makes music as a hobby!](https://www.youtube.com/channel/UCQ9UTdwEDChczmWFOKY_OTQ)`)
-    .addField('RemixLuke', `[My Pogo inspired music will be posted on this channel, stay tuned](https://soundcloud.com/remixluke)`)
-    .addField('SimmerTunes', `[Formerly known as ShowToonZ](https://soundcloud.com/simmertunes)`) 
-    .addField('Smuffy', `[Smuffy, AKA Joshua Smith: a music producer from Brisbane, Australia trying to figure out just how this strange industry works](https://soundcloud.com/smuffy)`)
-    .addField('ThinkFishTank', `[Plunderphonics artist from Maine](https://soundcloud.com/thinkfishtank)`)
-    .setFooter("If you would like more people you think should be added, contact me at Soldz (CF)#6819.", `${client.user.displayAvatarURL}`)
+    .setFooter(`Page ${page} of ${pages.length} | If you would like more people you think should be added, contact me at Soldz (CF)#6819.`, client.user.displayAvatarURL) 
     .setThumbnail(sicon) 
-    return message.channel.send(blujayembed);
+ 
+  message.channel.send(embed).then(msg => { 
+   
+    msg.react('⬅').then( r => { 
+      msg.react('➡') 
+     
+      const backwardsFilter = (reaction, user) => reaction.emoji.name === '⬅' && user.id === message.author.id;
+      const forwardsFilter = (reaction, user) => reaction.emoji.name === '➡' && user.id === message.author.id; 
+     
+      const backwards = msg.createReactionCollector(backwardsFilter, { time: 60000 }); 
+      const forwards = msg.createReactionCollector(forwardsFilter, { time: 60000 }); 
+     
+      
+      backwards.on('collect', r => { 
+        if (page === 1) return; 
+        page--; 
+        embed.setDescription(pages[page-1]); 
+        embed.setFooter(`Page ${page} of ${pages.length} | If you would like more people you think should be added, contact me at Soldz (CF)#6819.`, client.user.displayAvatarURL); 
+        msg.edit(embed) 
+      })
+     
+      forwards.on('collect', r => { 
+        if (page === pages.length) return; 
+        page++; 
+        embed.setDescription(pages[page-1]); 
+        embed.setFooter(`Page ${page} of ${pages.length} | If you would like more people you think should be added, contact me at Soldz (CF)#6819.`, client.user.displayAvatarURL); 
+        msg.edit(embed) 
+      })
+   
+    })
+ 
+  })
+	  
 }
 	
 
