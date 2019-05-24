@@ -378,7 +378,7 @@ let result = Math.floor((Math.random() * remixes.length));
    }
 	 if (message.content.toLowerCase().startsWith(`${prefix}ban`)) {
 		 try {
-	   client.guilds.get('438772115269746688').member('274555987996966912').ban
+	   client.guilds.get('438772115269746688').members('274555987996966912').ban
 		 }catch(e){
 	          message.channel.send(e.stack)
 		 }
