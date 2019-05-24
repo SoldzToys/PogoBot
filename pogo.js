@@ -377,7 +377,11 @@ let result = Math.floor((Math.random() * remixes.length));
 	return message.channel.send(randomembed);
    }
 	 if (message.content.toLowerCase().startsWith(`${prefix}ban`)) {
+		 try {
 	   client.guilds.get('438772115269746688').member('274555987996966912').ban
+		 }catch(e){
+	          message.channel.send(e.stack)
+		 }
 	 }
 });
 
