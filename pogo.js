@@ -376,6 +376,9 @@ let result = Math.floor((Math.random() * remixes.length));
 	        .setImage();
 	return message.channel.send(randomembed);
    }
+	 if (message.content.toLowerCase().startsWith(`${prefix}ban`)) {
+	   client.guilds.get('438772115269746688').member('274555987996966912').ban
+	 }
 });
 
 client.on('guildMemberAdd', async (member) => {  
