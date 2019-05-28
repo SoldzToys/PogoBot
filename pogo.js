@@ -164,20 +164,24 @@ if(!message.member.hasPermission("MANAGE_CHANNELS")) return;
       const forwards = msg.createReactionCollector(forwardsFilter, { time: 60000 }); 
      
       
-      backwards.on('collect', r => { 
+      backwards.on('collect', async (r) => { 
         if (page === 1) return; 
         page--; 
         embed.setDescription(pages[page-1]); 
         embed.setFooter(`Page ${page} of ${pages.length} | If you would like more people you think should be added, contact me at Soldz (CF)#6819.`, client.user.displayAvatarURL); 
         msg.edit(embed) 
+	await msg.clearReactions()
+        msg.react('⬅').then(r => msg.react('➡'))
       })
      
-      forwards.on('collect', r => { 
+      forwards.on('collect', async (r) => { 
         if (page === pages.length) return; 
         page++; 
         embed.setDescription(pages[page-1]); 
         embed.setFooter(`Page ${page} of ${pages.length} | If you would like more people you think should be added, contact me at Soldz (CF)#6819.`, client.user.displayAvatarURL); 
         msg.edit(embed) 
+	await msg.clearReactions()
+        msg.react('⬅').then(r => msg.react('➡'))
       })
    
     })
