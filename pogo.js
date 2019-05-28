@@ -154,8 +154,10 @@ if(!message.member.hasPermission("MANAGE_CHANNELS")) return;
  
   message.channel.send(embed).then(msg => { 
    
-    msg.react('⬅').then( r => { 
-      msg.react('➡') 
+//     msg.react('⬅').then( r => { 
+//       msg.react('➡') 
+	msg.react('➡').then( r => { 
+       
      
       const backwardsFilter = (reaction, user) => reaction.emoji.name === '⬅' && user.id === message.author.id;
       const forwardsFilter = (reaction, user) => reaction.emoji.name === '➡' && user.id === message.author.id; 
@@ -171,7 +173,7 @@ if(!message.member.hasPermission("MANAGE_CHANNELS")) return;
         embed.setFooter(`Page ${page} of ${pages.length} | If you would like more people you think should be added, contact me at Soldz (CF)#6819.`, client.user.displayAvatarURL); 
         msg.edit(embed) 
 	await msg.clearReactions()
-        msg.react('⬅').then(r => msg.react('➡'))
+        msg.react('➡')//         msg.react('⬅').then(r => msg.react('➡'))
       })
      
       forwards.on('collect', async (r) => { 
@@ -181,7 +183,7 @@ if(!message.member.hasPermission("MANAGE_CHANNELS")) return;
         embed.setFooter(`Page ${page} of ${pages.length} | If you would like more people you think should be added, contact me at Soldz (CF)#6819.`, client.user.displayAvatarURL); 
         msg.edit(embed) 
 	await msg.clearReactions()
-        msg.react('⬅').then(r => msg.react('➡'))
+        msg.react('⬅')//.then(r => msg.react('➡'))
       })
    
     })
